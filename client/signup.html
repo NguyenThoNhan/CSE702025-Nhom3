@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký - Evo Tour</title>
+    <!-- Font Awesome cho icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="css/sign.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="aurora aurora-1"></div>
+        <div class="aurora aurora-2"></div>
+        <div class="aurora aurora-3"></div>
+    </div>
+    <div class="form-container">
+        <div class="auth-form">
+            <h2><i class="fas fa-user-plus"></i> <span>Đăng Ký</span></h2>
+            <div class="form-group">
+                <i class="icon fas fa-user"></i>
+                <input type="text" id="username" placeholder="Tên đăng nhập" required>
+            </div>
+            <div class="form-group">
+                <i class="icon fas fa-envelope"></i>
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <i class="icon fas fa-lock"></i>
+                <input type="password" id="password" placeholder="Mật khẩu" required>
+            </div>
+            <button id="signup-btn" class="submit-btn"><span>Đăng Ký</span></button>
+            <button id="face-signup-btn" class="face-recognition-btn"><span>Đăng Ký bằng Khuôn mặt</span> <i class="fas fa-camera"></i></button>
+            
+            <div id="face-recognition-section" style="display: none; margin-top: 20px;">
+                <video id="video" width="300" height="225" autoplay muted></video>
+                <div class="loading" id="loading" style="display: none;"><i class="fas fa-spinner"></i><span>Đang xử lý...</span></div>
+                <button id="close-webcam-btn" class="close-webcam-btn"><span>Đóng Webcam</span></button>
+            </div>
+
+            <div class="switch-form-link">
+                Đã có tài khoản? <a href="signin.html">Đăng nhập ngay</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- TẢI LẠI THƯ VIỆN AXIOS (QUAN TRỌNG) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    
+    <!-- Tải script logic sau cùng -->
+    <script src="js/faceRecognition.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

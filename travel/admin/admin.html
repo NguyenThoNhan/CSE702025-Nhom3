@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Evo Tour</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <div class="admin-layout">
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="#" class="logo">
+                    <img src="../images/register.png" alt="Logo">
+                    <span>Evo Tour</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-title">MENU</li>
+                    <li class="active"><a href="admin.html"><i class="fas fa-tachometer-alt"></i> Bảng điều khiển</a></li>
+                    <li><a href="customers.html"><i class="fas fa-users"></i> Quản lý khách hàng</a></li>
+                    <li><a href="products.html"><i class="fas fa-box-open"></i> Quản lý sản phẩm</a></li>
+                    <li><a href="revenue.html"><i class="fas fa-file-invoice-dollar"></i> Quản lý đơn hàng</a></li>
+                    <li><a href="../404_page/cow-401page.html"><i class="fas fa-robot"></i> Quản lý chatbot</a></li>
+        <li><a href="reviews.html"><i class="fas fa-star"></i> Quản lý đánh giá</a></li>
+        <li><a href="support.html"><i class="fas fa-headset"></i> Chăm sóc khách hàng</a></li>
+        <li class="nav-title">Báo cáo</li>
+                  <li><a href="revenue.html"><i class="fas fa-chart-line"></i> Doanh thu & Báo cáo</a></li>          
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="main-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="theme-switcher">
+                        <i class="fas fa-sun"></i>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div class="user-profile">
+                        <a href="../../client/signin.html"><img src="../images/g-2.jpg" alt="Admin Avatar"></a></a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-grid">
+                <!-- Welcome Card -->
+                <div class="card welcome-card">
+                    <div class="welcome-text">
+                        <h3>Welcome back, Admin!</h3>
+                        <p>Dữ liệu tổng quan về website của bạn.</p>
+                        <div class="stats">
+                            <div>
+                                <h4 id="today-sales">0đ</h4>
+                                <span>Today's Sales</span>
+                                <div class="progress-bar"><div id="today-sales-progress" style="width: 0%;"></div></div>
+                            </div>
+                            <div>
+                                <h4 id="total-revenue-stat">0đ</h4>
+                                <span>Total Revenue</span>
+                                <div class="progress-bar"><div id="total-revenue-progress" style="width: 100%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome-img">
+                        <img src="../images/admin.png" alt="Welcome Illustration">
+                    </div>
+                </div>
+
+                        <!-- Dashboard Content -->
+            <div class="dashboard-grid">
+                <!-- Stat Cards -->
+                <div class="card"><h4>Sales</h4><canvas id="salesChart"></canvas></div>
+                <div class="card"><h4>Monthly</h4><h2 id="monthly-revenue"></h2><p>+16.5%</p></div>
+                <div class="card"><h4>Yearly</h4><h2 id="yearly-revenue"></h2><p>+24.9%</p></div>
+                
+                <!-- Social & Products & Vendors -->
+                <div class="card"><h4>Social Revenue</h4><div id="social-revenue-list"></div></div>
+                <div class="card"><h4>Popular Products</h4><div id="popular-products-list"></div></div>
+                <div class="card"><h4>Top Vendors (Demo)</h4><div id="top-vendors-list"></div></div>
+            </div>
+        </main>
+    </div>
+                <!-- Stat Cards -->
+                <div class="card stat-card">
+                    <h4>Total Orders</h4>
+                    <p id="total-orders">0</p>
+                    <i class="fas fa-shopping-cart card-icon"></i>
+                </div>
+                <div class="card stat-card">
+                    <h4>Total Customers</h4>
+                    <p id="total-customers">0</p>
+                    <i class="fas fa-users card-icon"></i>
+                </div>
+
+                <!-- Chart Cards -->
+                <div class="card chart-card-large">
+                    <h4>Monthly Revenue</h4>
+                    <canvas id="monthlyRevenueChart"></canvas>
+                </div>
+                <div class="card chart-card-small">
+                    <h4>Device Type (Demo)</h4>
+                    <canvas id="deviceTypeChart"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Các file JS của bạn -->
+    <script src="../database.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

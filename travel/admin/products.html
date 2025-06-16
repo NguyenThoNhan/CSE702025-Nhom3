@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Sản phẩm - Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="dark">
+
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header"><a href="#" class="logo"><img src="../images/register.png" alt="Logo"><span>Evo Tour</span></a></div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-title">MENU</li>
+                    <li><a href="admin.html"><i class="fas fa-tachometer-alt"></i> Bảng điều khiển</a></li>
+                    <li><a href="customers.html"><i class="fas fa-users"></i> Quản lý khách hàng</a></li>
+                    <li class="active"><a href="products.html"><i class="fas fa-box-open"></i> Quản lý sản phẩm</a></li>
+                    <li><a href="revenue.html"><i class="fas fa-file-invoice-dollar"></i> Quản lý đơn hàng</a></li>
+                    <li><a href="#"><i class="fas fa-robot"></i> Quản lý chatbot</a></li>
+                   li class="nav-title">Tương tác</li>
+        <li><a href="reviews.html"><i class="fas fa-star"></i> Quản lý đánh giá</a></li>
+        <li><a href="support.html"><i class="fas fa-headset"></i> Chăm sóc khách hàng</a></li>
+        <li class="nav-title">Báo cáo</li>
+                  <li><a href="revenue.html"><i class="fas fa-chart-line"></i> Doanh thu & Báo cáo</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="main-header">
+                <div class="header-left"><button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button><div class="search-box"><i class="fas fa-search"></i><input type="text" placeholder="Search..."></div></div>
+                <div class="header-right"><div class="theme-switcher"><i class="fas fa-sun"></i><label class="switch"><input type="checkbox" id="theme-toggle" checked><span class="slider round"></span></label><i class="fas fa-moon"></i></div><div class="user-profile"><img src="../images/g-2.jpg" alt="Admin Avatar"></div></div>
+            </header>
+
+            <div class="page-content">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Danh sách Tour</h3>
+                        <button class="btn-primary" id="add-new-tour-btn"><i class="fas fa-plus"></i> Thêm tour mới</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Ảnh</th>
+                                        <th>Tên Tour</th>
+                                        <th>Loại Tour</th>
+                                        <th>Giá (Người lớn)</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="products-table-body">
+                                    <!-- Dữ liệu tour sẽ được JS chèn vào đây -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ===== MODAL THÊM/SỬA SẢN PHẨM ===== -->
+    <div class="modal-overlay" id="product-modal-overlay">
+        <div class="modal-content large">
+            <span class="close-modal" id="close-product-modal">×</span>
+            <h2 id="modal-title">Thêm Tour Mới</h2>
+            <form id="product-form">
+                <input type="hidden" id="tour-id">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="tour-name">Tên Tour</label>
+                        <input type="text" id="tour-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tour-breadcrumb">Loại Tour (breadcrumb)</label>
+                        <select id="tour-breadcrumb" required>
+                            <option value="Tour Trong Nước">Tour Trong Nước</option>
+                            <option value="Tour Nước Ngoài">Tour Nước Ngoài</option>
+                            <option value="Tour Giờ Chót">Tour Giờ Chót</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="tour-price">Giá người lớn (số)</label>
+                        <input type="number" id="tour-price-num" required>
+                    </div>
+                     <div class="form-group">
+                        <label for="tour-schedule">Lịch khởi hành</label>
+                        <input type="text" id="tour-schedule">
+                    </div>
+                    <div class="form-group">
+                        <label for="tour-duration">Thời gian</label>
+                        <input type="text" id="tour-duration">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="tour-image-upload">Ảnh đại diện</label>
+                        <input type="file" id="tour-image-upload" accept="image/*">
+                        <div class="image-preview-wrapper">
+                            <img id="tour-image-preview" src="" alt="Image Preview">
+                            <input type="hidden" id="tour-image-path">
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">Lưu thay đổi</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="../database.js"></script>
+    <script src="products.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

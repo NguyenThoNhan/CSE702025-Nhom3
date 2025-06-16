@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Khuyến Mãi - Evo Tour</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header (Tái sử dụng) -->
+    <header class="header">
+        <div class="header-main"> <a href="main.html" class="logo"> <img src="images/register.png" alt="Evo Tour Logo"> </a> <form action="" class="search-form"> <input type="search" name="search" id="search-box" placeholder="Nhập tên thành phố bạn muốn tới..."> <label for="search-box" class="fas fa-search"></label> </form> <div class="icons"> <a href="#"><i class="fas fa-user"></i> Tài khoản</a> <a href="favorites.html"><i class="fas fa-heart"></i> Yêu thích <span class="badge" id="fav-count">0</span></a> <a href="cart.html"><i class="fas fa-shopping-cart"></i> Giỏ hàng <span class="badge" id="cart-count">0</span></a> </div> <div id="menu-btn" class="fas fa-bars"></div> </div>
+        <nav class="navbar"> <ul> <li><a href="main.html">Trang chủ</a></li> <li><a href="#">Giới thiệu</a></li> <li class="dropdown"> <a href="#">Tour du lịch <i class="fas fa-angle-down"></i></a> <ul class="dropdown-menu"> <li><a href="tour-domestic.html">Tour trong nước</a></li> <li><a href="tour-international.html">Tour nước ngoài</a></li> <li><a href="#">Tour theo chủ đề</a></li> </ul> </li> <li><a href="promotions.html">Tour khuyến mãi</a></li> <li><a href="news.html">Tin tức</a></li> <li><a href="dichvu/dichvu.html">Dịch vụ</a></li> <li><a href="404_page/cow-401page.html">FAQ</a></li> <li><a href="404_page/cow-401page.html">Liên hệ</a></li> </ul> </nav>
+    </header>
+
+    <main class="static-page">
+        <!-- Breadcrumb -->
+        <section class="breadcrumb-section">
+            <div class="breadcrumb">
+                <a href="main.html">Trang chủ</a> / 
+                <span>Tour khuyến mãi</span>
+            </div>
+        </section>
+
+        <!-- Promotion Banner -->
+        <section class="promo-banner-section-simple" style="background-image: url('images/cat-banner-2.webp');">
+            <!-- Banner này chỉ dùng ảnh nền, không cần nội dung -->
+        </section>
+
+        <!-- Search Bar Section (Được tách riêng) -->
+        <section class="promo-search-section">
+            <div class="booking-form-container promo-search">
+                 <form action="" class="booking-form">
+                    <div class="input-box"> <i class="fas fa-map-marker-alt"></i> <input type="text" placeholder="Bạn muốn đi đâu?"> </div>
+                    <div class="input-box"> <i class="fas fa-calendar-alt"></i> <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Chọn ngày khởi hành"> </div>
+                    <div class="input-box"> <i class="fas fa-plane-departure"></i> <select> <option value="">Khởi hành từ</option> <option value="hcm">Hồ Chí Minh</option> <option value="hanoi">Hà Nội</option> <option value="danang">Đà Nẵng</option> </select> </div>
+                    <input type="submit" class="btn" value="TÌM">
+                </form>
+            </div>
+        </section>
+        
+        <!-- Filter Bar and Tour List Section -->
+        <section class="promo-list-section">
+             <div class="sort-bar" id="sort-bar">
+                <span>Xếp theo:</span>
+                <label><input type="radio" name="sort" value="default" checked> Mặc định</label>
+                <label><input type="radio" name="sort" value="name-asc"> Tên A-Z</label>
+                <label><input type="radio" name="sort" value="name-desc"> Tên Z-A</label>
+                <label><input type="radio" name="sort" value="price-asc"> Giá tăng dần</label>
+                <label><input type="radio" name="sort" value="price-desc"> Giá giảm dần</label>
+            </div>
+
+            <div class="packages">
+                 <div class="box-container" id="promotions-container">
+                    <!-- Tour khuyến mãi sẽ được JS chèn vào đây -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Tái sử dụng) -->
+    <footer class="footer" style="background: #333; color: #fff;">
+       <!-- Dán code Footer đầy đủ của bạn vào đây -->
+        <div class="box-container" style="display:flex; justify-content:space-around; align-items:center; padding: 2rem 7%;"> <div> <h3 style="color:#fff; font-size: 1.8rem;">ĐĂNG KÝ NHẬN TIN</h3> <p style="color:#ccc; font-size: 1.4rem;">Các deal du lịch giảm giá đến 60% sẽ được gửi đến bạn</p> </div> <form action="" class="newsletter-form" style="display:flex;"> <input type="email" placeholder="Địa chỉ Email" style="padding:1.2rem; border-radius: .5rem 0 0 .5rem; width: 30rem; font-size: 1.5rem;"> <button type="submit" class="btn" style="border-radius: 0 .5rem .5rem 0;">Đăng ký</button> </form> <div class="social-icons" style="font-size: 2.5rem;"> <a href="#" style="color:#fff; margin: 0 1rem;"><i class="fab fa-facebook-f"></i></a> <a href="#" style="color:#fff; margin: 0 1rem;"><i class="fab fa-twitter"></i></a> <a href="#" style="color:#fff; margin: 0 1rem;"><i class="fab fa-instagram"></i></a> <a href="#" style="color:#fff; margin: 0 1rem;"><i class="fab fa-youtube"></i></a> </div> </div>
+    </footer>
+
+    <!-- Các file Script -->
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+    <script src="promotions.js"></script>
+</body>
+</html>

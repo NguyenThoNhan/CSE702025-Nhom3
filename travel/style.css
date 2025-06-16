@@ -1,0 +1,1418 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --blue: #007bff;
+    --orange: #ff6600;
+    --dark-grey: #333;
+    --light-grey: #666;
+    --white: #fff;
+    --light-bg: #f8f9fa;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+* {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
+
+body {
+    background: var(--light-bg);
+}
+
+section {
+    padding: 3rem 7%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--orange);
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: .5rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #e65c00;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3.5rem;
+    color: var(--dark-grey);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.heading span {
+    color: var(--orange);
+}
+
+.sub-heading {
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--light-grey);
+    margin-bottom: 3rem;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+}
+
+.header .header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 7%;
+    border-bottom: var(--border);
+}
+
+.header .logo img {
+    height: 5rem;
+}
+
+.header .search-form {
+    width: 40rem;
+    height: 4.5rem;
+    border-radius: .5rem;
+    border: var(--border);
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.header .search-form input {
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    color: var(--light-grey);
+}
+
+.header .search-form label {
+    font-size: 2rem;
+    color: var(--light-grey);
+    cursor: pointer;
+}
+
+.header .icons a {
+    font-size: 1.4rem;
+    color: var(--dark-grey);
+    margin-left: 2rem;
+}
+
+.header .icons a i {
+    color: var(--blue);
+    margin-right: .5rem;
+}
+
+.header .icons .badge {
+    background: var(--orange);
+    color: var(--white);
+    font-size: 1rem;
+    padding: .2rem .5rem;
+    border-radius: 50%;
+    position: relative;
+    top: -1rem;
+    left: -.5rem;
+}
+
+#menu-btn {
+    font-size: 2.5rem;
+    color: var(--dark-grey);
+    cursor: pointer;
+    display: none;
+}
+
+.header .navbar {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.header .navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.header .navbar ul li {
+    position: relative;
+}
+
+.header .navbar ul li a {
+    font-size: 1.6rem;
+    padding: 1rem 1.5rem;
+    color: var(--dark-grey);
+    font-weight: 500;
+    display: block;
+}
+
+.header .navbar ul li a:hover,
+.header .navbar ul li a.active {
+    color: var(--blue);
+}
+
+.header .navbar ul li .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    list-style: none;
+    padding: 1rem 0;
+    min-width: 22rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    display: none;
+    opacity: 0;
+    transform: translateY(1rem);
+}
+
+.header .navbar ul li:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header .navbar ul li .dropdown-menu li a {
+    font-size: 1.5rem;
+}
+
+/* Home Section */
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    padding: 0;
+}
+
+.home .video-container video {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.3);
+    z-index: -1;
+}
+
+.home .content {
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 3rem;
+}
+
+.home .content h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    text-shadow: 0 .5rem 1rem rgba(0,0,0,.3);
+}
+
+.home .content p {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.booking-form-container {
+    background: rgba(255,255,255, .9);
+    padding: 2rem;
+    border-radius: .5rem;
+    width: 80%;
+    max-width: 900px;
+}
+
+.booking-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+}
+
+.booking-form .input-box {
+    flex: 1 1 20rem;
+    background: var(--white);
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    border: var(--border);
+}
+
+.booking-form .input-box i {
+    color: var(--light-grey);
+    font-size: 1.8rem;
+    margin-right: 1rem;
+}
+
+.booking-form .input-box input,
+.booking-form .input-box select {
+    width: calc(100% - 3rem);
+    font-size: 1.6rem;
+    color: var(--light-grey);
+    background: none;
+}
+.booking-form .input-box select {
+    width: 100%;
+}
+
+
+.booking-form .btn {
+    height: 5.2rem;
+}
+
+/* Packages */
+.packages .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.packages .box {
+    background: var(--white);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.packages .box .image {
+    height: 25rem;
+    overflow: hidden;
+}
+
+.packages .box .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.packages .box:hover .image img {
+    transform: scale(1.1);
+}
+
+.packages .box .content {
+    padding: 2rem;
+}
+
+.packages .box .content h3 {
+    font-size: 1.8rem;
+    color: var(--dark-grey);
+    height: 5rem;
+    overflow: hidden;
+}
+
+.packages .box .content .details {
+    padding: 1rem 0;
+    color: var(--light-grey);
+    font-size: 1.4rem;
+}
+
+.packages .box .content .details i {
+    color: var(--orange);
+    margin-right: .5rem;
+}
+.packages .box .content .details .schedule span{
+    color: var(--orange);
+    font-weight: 600;
+}
+
+.packages .box .content .price-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.packages .box .content .price-box .price {
+    font-size: 2rem;
+    color: var(--orange);
+    font-weight: 700;
+}
+.packages .box .content .price-box .old-price {
+    font-size: 1.4rem;
+    color: var(--light-grey);
+    text-decoration: line-through;
+}
+
+/* Banner */
+.banner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+.banner .banner-item {
+    border-radius: .5rem;
+    overflow: hidden;
+    height: 30rem;
+}
+.banner .banner-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Destinations */
+.destinations .box-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+    height: 60rem;
+}
+.destinations .box {
+    overflow: hidden;
+    border-radius: .5rem;
+    position: relative;
+}
+.destinations .box.large {
+    grid-column: span 5;
+}
+.destinations .box.small {
+    grid-column: span 2;
+}
+
+.destinations .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.destinations .box:hover img {
+    transform: scale(1.1);
+}
+
+.destinations .box .info {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: var(--white);
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,.5);
+}
+.destinations .box .info h3 {
+    font-size: 2.5rem;
+}
+.destinations .box .info p {
+    font-size: 1.5rem;
+}
+.destinations .box .info.small {
+    bottom: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+.destinations .box .info.small h3 {
+    font-size: 2rem;
+}
+
+/* Footer */
+.footer {
+    background: var(--white);
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    gap: 2rem;
+}
+.footer .box h3 {
+    font-size: 2rem;
+    color: var(--dark-grey);
+    padding: 1rem 0;
+}
+.footer .box a,
+.footer .box p {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--light-grey);
+    padding: .8rem 0;
+}
+.footer .box a i {
+    color: var(--blue);
+    margin-right: .5rem;
+}
+.footer .box a:hover {
+    color: var(--blue);
+}
+.footer .newsletter-form {
+    display: flex;
+    flex-direction: column;
+}
+.footer .newsletter-form input[type="email"]{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    border-top: var(--border);
+    font-size: 1.6rem;
+    color: var(--light-grey);
+}
+.footer .credit span {
+    color: var(--blue);
+    font-weight: 600;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header .header-main {
+        padding: 2rem;
+    }
+    .header .search-form {
+        display: none;
+    }
+    section {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        left: -100%; right: 0;
+        background: var(--white);
+        border-top: var(--border);
+        padding: 0;
+    }
+    .header .navbar.active {
+        left: 0;
+    }
+    .header .navbar ul {
+        flex-direction: column;
+    }
+    .header .navbar ul li a {
+        padding: 1.5rem 2rem;
+        border-bottom: var(--border);
+    }
+     .header .navbar ul li .dropdown-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        opacity: 1;
+        transform: none;
+    }
+    .header .navbar ul li:hover .dropdown-menu {
+        display: block;
+    }
+    .header .navbar ul li .dropdown-menu li a {
+        padding-left: 4rem;
+        background: var(--light-bg);
+    }
+
+    .booking-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .booking-form .btn {
+        width: 100%;
+    }
+
+    .destinations .box-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        height: auto;
+    }
+    .destinations .box.large,
+    .destinations .box.small {
+        grid-column: span 2;
+        height: 25rem;
+    }
+}
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .header .icons {
+        display: none;
+    }
+     .destinations .box.large,
+    .destinations .box.small {
+        grid-column: span 2;
+        height: 20rem;
+    }
+}
+
+/* Dán đoạn code này vào cuối file style.css, trước phần MEDIA QUERIES */
+
+/* View All Button Styling */
+.view-all-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* ======== TOUR DETAIL PAGE STYLES ======== */
+.tour-detail-page {
+    padding-top: 15rem; /* Khoảng cách với header fixed */
+}
+.breadcrumb-section {
+    padding: 1rem 7%;
+    background: var(--white);
+    border-bottom: var(--border);
+}
+.breadcrumb {
+    font-size: 1.4rem;
+    color: var(--light-grey);
+}
+.breadcrumb a {
+    color: var(--dark-grey);
+}
+.breadcrumb a:hover {
+    color: var(--blue);
+}
+
+.tour-detail-container {
+    display: flex;
+    gap: 3rem;
+    padding: 3rem 7%;
+}
+
+.left-column {
+    flex: 2;
+}
+.left-column .tour-gallery img {
+    width: 100%;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+}
+.left-column .tour-content {
+    margin-top: 3rem;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: .5rem;
+}
+.left-column .tour-content h3 {
+    font-size: 2.2rem;
+    color: var(--dark-grey);
+    border-bottom: .2rem solid var(--orange);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+.left-column .tour-content h4 {
+    font-size: 1.8rem;
+    color: var(--blue);
+    margin: 2rem 0 1rem;
+}
+.left-column .tour-content p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--light-grey);
+}
+.left-column .tour-content img {
+    width: 100%;
+    border-radius: .5rem;
+    margin-top: 1rem;
+}
+
+
+.right-column {
+    flex: 1;
+}
+.right-column .tour-summary-box {
+    position: sticky;
+    top: 17rem; /* header height + some space */
+    background: var(--white);
+    padding: 2.5rem;
+    border: var(--border);
+    border-radius: .5rem;
+}
+
+.tour-summary-box h1 {
+    font-size: 2.4rem;
+    color: var(--dark-grey);
+    line-height: 1.4;
+    position: relative;
+    padding-right: 4rem;
+}
+.tour-summary-box .favorite-btn {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 2.5rem;
+    color: var(--light-grey);
+    background: none;
+    cursor: pointer;
+}
+.tour-summary-box .favorite-btn.active {
+    color: red;
+}
+.tour-summary-box .price-section {
+    font-size: 1.8rem;
+    color: var(--light-grey);
+    margin-top: 1.5rem;
+}
+.tour-summary-box .main-price {
+    font-size: 2.8rem;
+    color: var(--orange);
+    font-weight: 700;
+}
+.tour-summary-box .btn-secondary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--orange);
+    color: var(--white);
+    padding: 1rem;
+    font-size: 1.6rem;
+    border-radius: .5rem;
+    margin-top: 1.5rem;
+}
+.tour-summary-box .btn-secondary:hover {
+    background: #e65c00;
+}
+
+.tour-summary-box .tour-info {
+    margin: 2rem 0;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    padding: 2rem 0;
+}
+.tour-summary-box .tour-info p {
+    font-size: 1.5rem;
+    color: var(--light-grey);
+    line-height: 2;
+}
+.tour-summary-box .tour-info p i {
+    color: var(--blue);
+    width: 2rem;
+}
+.tour-summary-box .tour-info p b {
+    color: var(--dark-grey);
+    font-weight: 500;
+}
+.tour-summary-box .tour-info p b.highlight {
+    color: var(--orange);
+    font-weight: 700;
+}
+.tour-summary-box .tour-highlights {
+    list-style-type: none;
+    font-size: 1.4rem;
+    color: var(--light-grey);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+.tour-summary-box .tour-highlights li::before {
+    content: '✓';
+    color: green;
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+.tour-summary-box .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+.tour-summary-box .cta-buttons .btn {
+    flex: 1;
+}
+.tour-summary-box .btn-blue {
+    background: var(--blue);
+}
+.tour-summary-box .btn-blue:hover {
+    background: #0056b3;
+}
+
+.tour-summary-box .info-accordion {
+    margin-top: 2rem;
+    border-top: var(--border);
+    padding-top: 1rem;
+}
+.tour-summary-box .info-accordion a {
+    display: block;
+    background: #f1f1f1;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--dark-grey);
+    font-weight: 500;
+    border-radius: .5rem;
+}
+.tour-summary-box .info-accordion a:hover {
+    background: #e1e1e1;
+}
+.tour-summary-box .info-accordion a i {
+    margin-right: 1rem;
+    color: var(--blue);
+}
+
+/* ======== BOOKING & RELATED TOURS STYLES ======== */
+.booking-section,
+
+.booking-section h3,
+.related-tours-section .heading {
+    font-size: 2.2rem;
+    color: var(--dark-grey);
+    border-bottom: .2rem solid var(--orange);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+
+.booking-form-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1.5fr;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.booking-form-grid > div {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.booking-form-grid .grid-header {
+    font-weight: 600;
+    color: var(--dark-grey);
+    border-bottom: 2px solid #ddd;
+}
+
+.booking-form-grid input[type="number"] {
+    width: 8rem;
+    padding: .8rem;
+    font-size: 1.5rem;
+    border: var(--border);
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.grand-total-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.grand-total-row span:last-child {
+    color: var(--orange);
+    font-size: 2.2rem;
+}
+
+.final-booking-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.final-booking-row input {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: var(--border);
+    border-radius: .5rem;
+}
+
+/* CSS cho khu vực Tour tương tự */
+    .related-tours-section {
+        background: #f8f9fa; /* Một màu nền nhẹ nhàng để tách biệt */
+        padding: 3rem;
+        margin-top: 3rem;
+        border-radius: 0.5rem;
+    }
+    .related-tours-section .heading {
+        text-align: center;
+        font-size: 2.8rem;
+        color: #333;
+        margin-bottom: 2.5rem;
+        text-transform: uppercase;
+    }
+    .related-tours-section .heading span {
+        color: #ff6600; /* Màu nhấn cam */
+    }
+
+    /* CSS cho lưới các tour */
+    .related-tours-section .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Hiển thị đẹp trên nhiều kích thước màn hình */
+        gap: 2rem;
+    }
+
+    /* CSS cho mỗi thẻ tour */
+    .related-tours-section .box {
+        background: #fff;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .related-tours-section .box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.15);
+    }
+    .related-tours-section .box .image {
+        height: 20rem;
+        overflow: hidden;
+    }
+    .related-tours-section .box .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    .related-tours-section .box:hover .image img {
+        transform: scale(1.1);
+    }
+
+    /* CSS cho nội dung thẻ tour */
+    .related-tours-section .box .content {
+        padding: 1.5rem;
+    }
+    .related-tours-section .box .content h3 {
+        font-size: 1.6rem;
+        color: #333;
+        height: 4.5rem; /* Giới hạn 2 dòng */
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+    .related-tours-section .box .content .details {
+        font-size: 1.3rem;
+        color: #666;
+        margin-bottom: 1.5rem;
+    }
+    .related-tours-section .box .content .details p {
+        margin-bottom: 0.5rem;
+    }
+    .related-tours-section .box .content .details i {
+        color: #ff6600;
+        margin-right: 0.5rem;
+    }
+    .related-tours-section .box .content .details span {
+        color: #e53e3e; /* Màu đỏ cho ngày và thời gian */
+        font-weight: 500;
+    }
+    
+    /* CSS cho phần giá và nút */
+    .related-tours-section .box .content .price-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #eee;
+        padding-top: 1.5rem;
+    }
+    .related-tours-section .box .content .price-box .price {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #ff6600;
+    }
+    .related-tours-section .box .content .price-box .old-price {
+        font-size: 1.3rem;
+        color: #999;
+        text-decoration: line-through;
+        margin-right: 0.5rem;
+    }
+    .related-tours-section .box .content .price-box .btn {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        background: #ff6600;
+        color: #fff;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.2s ease;
+    }
+    .related-tours-section .box .content .price-box .btn:hover {
+        background: #e65c00;
+    }
+
+.final-booking-row .btn {
+    padding: 1rem 4rem;
+    background: var(--blue);
+}
+.final-booking-row .btn:hover {
+     background: #0056b3;
+}
+
+/* ======== STATIC PAGE & FAVORITES STYLES ======== */
+.static-page {
+    padding-top: 15rem; /* Khoảng cách với header fixed */
+}
+
+.empty-message {
+    font-size: 1.8rem;
+    color: var(--light-grey);
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.fav-icon-in-card {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    color: red;
+    background: rgba(255, 255, 255, 0.8);
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 .2rem .5rem rgba(0,0,0,.2);
+}
+
+/* ======== CART PAGE STYLES ======== */
+.cart-section {
+    padding: 3rem 7%;
+}
+.cart-section h1 {
+    font-size: 2.5rem;
+    color: var(--dark-grey);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.cart-container {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.cart-items-list {
+    flex: 3;
+}
+
+.cart-item {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: var(--border);
+    align-items: center;
+}
+
+.cart-item-image {
+    width: 15rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--dark-grey);
+    display: block;
+    margin-bottom: .5rem;
+}
+.cart-item-title:hover {
+    color: var(--blue);
+}
+
+.cart-item-info {
+    font-size: 1.4rem;
+    color: var(--light-grey);
+}
+
+.cart-item-remove {
+    font-size: 1.3rem;
+    color: red;
+    display: inline-block;
+    margin-top: 1rem;
+}
+.cart-item-remove:hover {
+    text-decoration: underline;
+}
+
+.cart-item-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.cart-summary {
+    flex: 1;
+    background: #f8f9fa;
+    border: var(--border);
+    border-radius: .5rem;
+    padding: 2rem;
+}
+
+.continue-shopping {
+    font-size: 1.4rem;
+    color: var(--blue);
+}
+.continue-shopping:hover {
+    text-decoration: underline;
+}
+
+.summary-details {
+    margin: 2rem 0;
+    padding: 2rem 0;
+    border-top: var(--border);
+    border-bottom: var(--border);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    color: var(--light-grey);
+    margin-bottom: 1rem;
+}
+
+.summary-row.total span {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark-grey);
+}
+.summary-row.total span:last-child {
+    color: var(--orange);
+}
+
+.btn-checkout {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    background: var(--blue);
+}
+.btn-checkout:hover {
+     background: #0056b3;
+}
+
+/* Responsive cho trang giỏ hàng */
+@media (max-width: 991px) {
+    .cart-container {
+        flex-direction: column;
+    }
+    .cart-summary {
+        width: 100%;
+    }
+}
+
+/* ======== PROMOTION PAGE STYLES (PHIÊN BẢN SỬA LỖI BỐ CỤC) ======== */
+.promo-banner-section-simple {
+    height: 30rem;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-bottom: -6rem; /* Tạo không gian để thanh tìm kiếm 'nổi' lên */
+}
+
+.promo-search-section {
+    position: relative;
+    z-index: 10; /* Đảm bảo thanh tìm kiếm nằm trên banner */
+    padding: 0 7%;
+}
+
+.promo-search-section .booking-form-container {
+    background: var(--white);
+    box-shadow: 0 1rem 2rem rgba(0,0,0, .15);
+    padding: 2.5rem;
+    border-radius: .5rem;
+}
+
+.promo-list-section {
+    padding: 3rem 7%;
+}
+
+.sort-bar {
+    background: var(--white);
+    padding: 1.5rem 2.5rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem; /* Tạo khoảng cách với danh sách tour bên dưới */
+}
+.sort-bar span {
+    font-weight: 600;
+}
+.sort-bar label {
+    cursor: pointer;
+    color: var(--light-grey);
+    display: inline-flex;
+    align-items: center;
+}
+.sort-bar input[type="radio"] {
+    margin-right: .5rem;
+    accent-color: var(--blue); /* Tô màu cho radio button khi được chọn */
+}
+.sort-bar label:has(input:checked) {
+    color: var(--blue);
+    font-weight: 500;
+}
+
+.promo-list-section .packages {
+    padding: 0;
+}
+
+/* ======== CHECKOUT MODAL STYLES ======== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none; /* Ẩn mặc định */
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: .5rem;
+    width: 90%;
+    max-width: 50rem;
+    position: relative;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.3);
+    animation: fadeIn .3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content h2 {
+    font-size: 2.2rem;
+    color: var(--dark-grey);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 3rem;
+    color: #aaa;
+    cursor: pointer;
+}
+.close-modal:hover {
+    color: var(--dark-grey);
+}
+
+#checkout-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+#checkout-form label {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--light-grey);
+    margin-bottom: .5rem;
+}
+
+#checkout-form input,
+#checkout-form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: .5rem;
+}
+
+#checkout-form button {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* ============================================= */
+/* CSS CHO CÁC TOUR TƯƠNG TỰ */
+/* ============================================= */
+/* Sửa lỗi cho .related-tours-section bằng cách kế thừa style từ .packages */
+.related-tours-section {
+    background: var(--light-bg); /* Hoặc màu nền bạn muốn */
+    padding: 3rem 0;
+}
+
+.related-tours-section .heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.related-tours-section .heading span {
+    color: var(--orange);
+}
+
+.related-tours-section .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+/* Các style khác cho .box, .image, .content... sẽ được kế thừa từ .packages */
+
+
+/* ============================================= */
+/* CSS CHO ĐÁNH GIÁ & BÌNH LUẬN (MỚI) */
+/* ============================================= */
+.review-section {
+    margin-top: 3rem;
+    background: var(--white);
+    padding: 3rem;
+    border-radius: .5rem;
+}
+
+.review-section .section-title {
+    font-size: 2.2rem;
+    color: var(--dark-grey);
+    border-bottom: .2rem solid var(--orange);
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.overall-rating {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: .5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.rating-summary .average-score {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--dark-grey);
+    margin-right: 1.5rem;
+}
+.rating-summary .average-stars {
+    display: inline-block;
+    font-size: 2rem;
+    color: #ffc107;
+}
+.rating-summary .review-count {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--light-grey);
+    margin-top: .5rem;
+}
+
+.review-form-container {
+    margin-bottom: 3rem;
+}
+.review-form-container h4 {
+    font-size: 1.8rem;
+    color: var(--dark-grey);
+    margin-bottom: 1.5rem;
+}
+
+.star-rating-input {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+.star-rating-input .stars {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+}
+.star-rating-input .stars i:hover,
+.star-rating-input .stars i.hover,
+.star-rating-input .stars i.active {
+    color: #ffc107;
+}
+
+#review-form textarea, #review-form input {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    border: var(--border);
+    margin-bottom: 1.5rem;
+}
+#review-form .form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+#review-form .btn {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.review-list .review-item {
+    padding: 2rem 0;
+    border-top: 1px dotted #ccc;
+}
+.review-list .review-item:first-child {
+    border-top: none;
+}
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+.reviewer-avatar {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.reviewer-name {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.review-stars {
+    font-size: 1.4rem;
+    color: #ffc107;
+}
+.review-text {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--light-grey);
+}
+.review-date {
+    display: block;
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-top: 1rem;
+    text-align: right;
+}

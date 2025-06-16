@@ -1,0 +1,50 @@
+[
+	{
+		"group": "North",
+		"areas": [
+			"Marble Palace",
+			"Shovabazar Rajbari",
+			"Kumartuli",
+			"Jorasanko Thakur Bari",
+			"Belur Math",
+			"Dakhineswar Kali Temple",
+			"North Kolkata's Old Streets",
+			"Rajbari and Heritage Homes",
+			"Sovabazar Rajbari"
+		],
+		"description": "North Kolkata, a historic enclave of the city, is renowned for its colonial architecture and vibrant cultural tapestry. Its winding lanes and bustling markets exude a timeless charm. Landmark sites like the Marble Palace and Shovabazar Rajbari highlight its grandeur. The area is celebrated for Kumartuli, a locality famous for its skilled artisans crafting intricate clay idols. Rich with heritage, North Kolkata offers a captivating glimpse into the past through its ancient temples, stately homes, and lively festivals, preserving the essence of Bengali tradition."
+	},
+	{
+		"group": "Central",
+		"areas": [
+			"St. Paul's Cathedral",
+			"Esplanade",
+			"Kolkata High Court",
+			"Indian Museum",
+			"Sahid Minar",
+			"Maidan",
+			"Kolkata Race Course",
+			"Victoria Memorial",
+			"College Street",
+			"Raj Bhavan",
+			"Kolkata Botanical Garden",
+			"Eden Gardens"
+		],
+		"description": "Central Kolkata, the city’s bustling core, is a vibrant area where history meets modernity. This locale features iconic landmarks such as the Victoria Memorial and the Indian Museum, showcasing architectural splendor. The Howrah Bridge, spanning the Hooghly River, is a key connector of the city’s diverse sections. Markets like New Market and Park Street are lively centers for shopping and dining. The area boasts a mix of historic structures and contemporary life, reflecting Kolkata’s dynamic cultural and historical landscape."
+	},
+	{
+		"group": "South",
+		"areas": [
+			"Science City",
+			"Kalighat Temple",
+			"Rabindra Sarobar Lake",
+			"Kolkata Zoo",
+			"Jodhpur Park",
+			"Ballygunge Place",
+			"Gitanjali Stadium",
+			"China town",
+			"Nandan"
+		],
+		"description": "South Kolkata is a bustling district known for its mix of tradition and modernity. Areas such as Ballygunge, Behala, and Jadavpur each have their own unique charm. The district features busy markets, upscale shopping centers, and landmarks like the Kalighat Temple and South City Mall. It also offers green spaces, including Rabindra Sarobar Lake, and is well-regarded for its active arts scene, educational institutions, and diverse dining options."
+	}
+]

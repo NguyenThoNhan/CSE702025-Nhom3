@@ -1,0 +1,258 @@
+/* news.css */
+
+.news-layout {
+    display: flex;
+    gap: 3rem;
+    padding: 3rem 7%;
+    align-items: flex-start;
+}
+
+.main-content {
+    flex: 3;
+}
+
+.sidebar {
+    flex: 1;
+    position: sticky;
+    top: 17rem; /* Giữ sidebar cố định khi cuộn */
+}
+
+/* --- Main Content --- */
+.news-grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Mặc định 1 cột */
+    gap: 3rem;
+}
+
+/* Bài viết đầu tiên sẽ lớn hơn */
+.news-grid-container .news-card:first-child {
+    grid-column: 1 / -1; /* Chiếm toàn bộ chiều rộng grid */
+    display: flex;
+    flex-direction: column;
+}
+.news-grid-container .news-card:first-child .news-card-image {
+    height: 40rem;
+}
+.news-grid-container .news-card:first-child .news-card-title {
+    font-size: 2.4rem;
+}
+
+.news-card {
+    background: var(--white);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.news-card-image {
+    height: 20rem;
+    overflow: hidden;
+}
+.news-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease;
+}
+.news-card:hover .news-card-image img {
+    transform: scale(1.05);
+}
+
+.news-card-content {
+    padding: 2rem;
+}
+
+.news-card-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--dark-grey);
+    margin-bottom: 1rem;
+}
+.news-card-title:hover {
+    color: var(--blue);
+}
+
+.news-card-excerpt {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    color: var(--light-grey);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    margin-top: 4rem;
+}
+.pagination a, .pagination span {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    border: var(--border);
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    color: var(--dark-grey);
+    background: var(--white);
+}
+.pagination a:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+.pagination .current {
+    background: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
+}
+.pagination .disabled {
+    color: #ccc;
+    background: #f1f1f1;
+    cursor: not-allowed;
+}
+
+
+/* --- Sidebar --- */
+.sidebar-widget {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: .5rem;
+    margin-bottom: 3rem;
+}
+
+.widget-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--dark-grey);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--blue);
+}
+
+.widget-list li {
+    list-style: none;
+    font-size: 1.5rem;
+    border-bottom: 1px dotted #eee;
+}
+.widget-list li a {
+    display: block;
+    padding: 1.2rem 0;
+    color: var(--light-grey);
+}
+.widget-list li a:hover {
+    color: var(--blue);
+    padding-left: .5rem;
+}
+.widget-list li.has-submenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.submenu-toggle {
+    background: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: var(--light-grey);
+}
+
+.popular-posts .post-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.popular-posts .post-item:last-child {
+    margin-bottom: 0;
+}
+.popular-posts .post-image {
+    width: 8rem;
+    height: 6rem;
+    object-fit: cover;
+    border-radius: .5rem;
+    flex-shrink: 0;
+}
+.popular-posts .post-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--dark-grey);
+    line-height: 1.5;
+}
+.popular-posts .post-title:hover {
+    color: var(--blue);
+}
+
+.sidebar-ad {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    /* Từ màn hình tablet trở lên, 3 bài viết cuối sẽ nằm trên 3 cột */
+    .news-grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .news-layout {
+        flex-direction: column;
+    }
+    .sidebar {
+        position: static;
+        width: 100%;
+    }
+}
+
+/* --- CSS THÊM VÀO CHO TRANG DANH SÁCH TOUR --- */
+
+/* Điều chỉnh lại grid để có 4 cột trên màn hình lớn */
+.promo-list-section .packages .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+/* Các định dạng cho thẻ tour (kế thừa từ style.css) */
+/* Nếu bạn đã có các định dạng này trong style.css thì không cần thêm lại */
+.packages .box {
+    background: var(--white);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.packages .box .image {
+    height: 25rem;
+    overflow: hidden;
+}
+.packages .box .image img {
+    width: 100%; height: 100%; object-fit: cover;
+}
+.packages .box:hover .image img {
+    transform: scale(1.1);
+}
+.packages .box .content {
+    padding: 2rem;
+}
+.packages .box .content h3 {
+    font-size: 1.8rem; color: var(--dark-grey); height: 5rem; overflow: hidden;
+}
+.packages .box .content .details {
+    padding: 1rem 0; color: var(--light-grey); font-size: 1.4rem;
+}
+.packages .box .content .details i {
+    color: var(--orange); margin-right: .5rem;
+}
+.packages .box .content .details .schedule span {
+    color: var(--orange); font-weight: 600;
+}
+.packages .box .content .price-box {
+    display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;
+}
+.packages .box .content .price-box .price {
+    font-size: 2rem; color: var(--orange); font-weight: 700;
+}
+.packages .box .content .price-box .old-price {
+    font-size: 1.4rem; color: var(--light-grey); text-decoration: line-through;
+}

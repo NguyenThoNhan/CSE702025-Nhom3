@@ -1,0 +1,146 @@
+[
+	{
+		"area": "North",
+		"name": "Polo Floatel Kolkata",
+		"address": "9/10, Kolkata Jetty, Strand Rd, Kol-700001",
+		"contact": "+91 99867 02889",
+		"img": "/assets/hotels/polofloatelkolkata.png",
+		"booking": "https://www.hotelpolotowers.com/polo-floatel-kolkata/"
+	},
+	{
+		"area": "North",
+		"name": "Hyatt Regency",
+		"address": "JA Block, Sector 3, Bidhannagar, Kolkata-700106",
+		"contact": "+91 33 6820 1234",
+		"img": "/assets/hotels/hyattregency.png",
+		"booking": "https://www.hyatt.com/hyatt-regency/en-US/kolka-hyatt-regency-kolkata"
+	},
+	{
+		"area": "North",
+		"name": "Brio Hotel",
+		"address": "IB 612 Block, Sector 3, Bidhannagar, Kolkata-700106",
+		"contact": "+91 91473 07545",
+		"img": "/assets/hotels/briohotel.png",
+		"booking": "https://briohotels.com/"
+	},
+	{
+		"area": "North",
+		"name": "Calcutta Bungalow",
+		"address": "5, Radha Kanta Jew St, Shyam Bazar, Kolkata-700004",
+		"contact": "+91 98301 84030",
+		"img": "/assets/hotels/calcuttabanglow.png",
+		"booking": "https://calcuttabungalow.com/"
+	},
+	{
+		"area": "North",
+		"name": "Raajkutir IHCL SeleQtions",
+		"address": "89C, Maulana Abul Kalam Azad Sarani, Kolkata-700054",
+		"contact": "+91 33 3501 4460",
+		"img": "/assets/hotels/rajkutir.png",
+		"booking": "https://www.seleqtionshotels.com/en-in/raajkutir-kolkata/"
+	},
+	{
+		"area": "North",
+		"name": "North Star Hotel, Dum Dum",
+		"address": "66/1, Dum Dum Road, Kolkata-700074",
+		"contact": "+91 98369 63151",
+		"img": "/assets/hotels/northstar.png",
+		"booking": "https://northstarhotel.in/"
+	},
+	{
+		"area": "Central",
+		"name": "The Oberoi Grand",
+		"address": "15, Jawaharlal Nehru Road, Kolkata-700013",
+		"contact": "+91 33 2249 2323",
+		"img": "/assets/hotels/theoberoigrand.png",
+		"booking": "https://www.oberoihotels.com/hotels-in-kolkata/"
+	},
+	{
+		"area": "Central",
+		"name": "The Park Hotel",
+		"address": "17, Park Street, Kolkata-700016",
+		"contact": "+91 33 2249 9000",
+		"img": "/assets/hotels/theparkhotel.png",
+		"booking": "https://www.theparkhotels.com/kolkata/"
+	},
+	{
+		"area": "Central",
+		"name": "Peerless Hotel",
+		"address": " 12, Jawaharlal Nehru Road, Kolkata-700013",
+		"contact": "+91 70666 43322",
+		"img": "/assets/hotels/peerlesshotel.png",
+		"booking": "https://peerlesshotels.com/peerless-hotel-kolkata-overview.php"
+	},
+	{
+		"area": "Central",
+		"name": "Kenilworth Hotel",
+		"address": "1 & 2, Little Russel Street, Kolkata-700071",
+		"contact": "+91 90511 33954",
+		"img": "/assets/hotels/kenilworthhotel.png",
+		"booking": "https://www.kenilworthhotels.com/russel-street-kolkata/"
+	},
+	{
+		"area": "Central",
+		"name": "Barsana Hotel",
+		"address": "84/3, Topsia Rd (South), Kolkata-700046",
+		"contact": "+91 85850 66251",
+		"img": "/assets/hotels/barsanahotel.png",
+		"booking": "https://www.barsanahotelkolkata.com/"
+	},
+	{
+		"area": "Central",
+		"name": "LaLiT Great Eastern",
+		"address": "1,2,3 Old Court House Street,  Dalhousie, Kolkata-700069",
+		"contact": "+91 33 4444 7777",
+		"img": "/assets/hotels/lalitgreateastern.png",
+		"booking": "https://www.thelalit.com/the-lalit-kolkata/"
+	},
+	{
+		"area": "South",
+		"name": "ITC Royal Bengal",
+		"address": "1, JBS Haldane Ave, Tangra, Kolkata-700046",
+		"contact": "1-800-419-6444",
+		"img": "/assets/hotels/itcroyalbengal.png",
+		"booking": "https://www.itchotels.com/in/en/itcroyalbengal-kolkata"
+	},
+	{
+		"area": "South",
+		"name": "JW Marriott",
+		"address": "4A, J.B.S. Haldane Avenue, Kolkata-700105",
+		"contact": "+91-33-6633 0000",
+		"img": "/assets/hotels/jwmarriott.png",
+		"booking": "https://www.marriott.com/en-us/hotels/ccujw-jw-marriott-hotel-kolkata/overview/"
+	},
+	{
+		"area": "South",
+		"name": "Taj Bengal",
+		"address": "34B, Belvedere Road, Alipore, Kolkata-700027 ",
+		"contact": "+91 33222 33939",
+		"img": "/assets/hotels/tajbengal.png",
+		"booking": "https://www.tajhotels.com/en-in/hotels/taj-bengal-kolkata"
+	},
+	{
+		"area": "South",
+		"name": "HHI",
+		"address": "235/1, A.J.C Bose Road, Kolkata-700020",
+		"contact": "+91 33 2280 2323",
+		"img": "/assets/hotels/hotelhindusthaninternational.png",
+		"booking": "https://www.hhikolkata.com/"
+	},
+	{
+		"area": "South",
+		"name": "Hyatt Centric",
+		"address": "17, Garcha 1st Lane, Kolkata-700019",
+		"contact": "+91 33 3521 1234",
+		"img": "/assets/hotels/hyattcentric.png",
+		"booking": "https://www.hyatt.com/hyatt-centric/kolct-hyatt-centric-ballygunge-kolkata"
+	},
+	{
+		"area": "South",
+		"name": "Roland Hotel",
+		"address": "28A, Rowland Road, Kolkata-700020",
+		"contact": "+91 90075 33333",
+		"img": "/assets/hotels/rolandhotel.png",
+		"booking": "https://rolandhotel.com/"
+	}
+]

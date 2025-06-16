@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng - Evo Tour</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header (Tái sử dụng) -->
+    <header class="header">
+         <!-- Dán code Header đầy đủ của bạn vào đây -->
+        <div class="header-main"> <a href="main.html" class="logo"> <img src="images/register.png" alt="Evo Tour Logo"> </a> <form action="" class="search-form"> <input type="search" name="search" id="search-box" placeholder="Nhập tên thành phố bạn muốn tới..."> <label for="search-box" class="fas fa-search"></label> </form> <div class="icons"> <a href="#"><i class="fas fa-user"></i> Tài khoản</a> <a href="favorites.html"><i class="fas fa-heart"></i> Yêu thích <span class="badge" id="fav-count">0</span></a> <a href="cart.html"><i class="fas fa-shopping-cart"></i> Giỏ hàng <span class="badge" id="cart-count">0</span></a> </div> <div id="menu-btn" class="fas fa-bars"></div> </div>
+        <nav class="navbar"> <ul> <li><a href="main.html">Trang chủ</a></li> <li><a href="#">Giới thiệu</a></li> <li class="dropdown"> <a href="#">Tour du lịch <i class="fas fa-angle-down"></i></a> <ul class="dropdown-menu"> <li><a href="tour-domestic.html">Tour trong nước</a></li> <li><a href="tour-international.html">Tour nước ngoài</a></li> <li><a href="#">Tour theo chủ đề</a></li> </ul> </li> <li><a href="promotions.html">Tour khuyến mãi</a></li> <li><a href="news.html">Tin tức</a></li> <li><a href="dichvu/dichvu.html">Dịch vụ</a></li> <li><a href="404_page/cow-401page.html">FAQ</a></li> <li><a href="404_page/cow-401page.html">Liên hệ</a></li> </ul> </nav>
+    </header>
+
+    <main class="static-page">
+        <!-- Breadcrumb -->
+        <section class="breadcrumb-section">
+            <div class="breadcrumb">
+                <a href="main.html">Trang chủ</a> / 
+                <span>Giỏ hàng</span>
+            </div>
+        </section>
+
+        <!-- Nội dung chính -->
+        <section class="cart-section">
+            <h1 id="cart-title">GIỎ HÀNG</h1>
+            <div class="cart-container">
+                <div class="cart-items-list" id="cart-items-container">
+                    <!-- Các tour trong giỏ hàng sẽ được JS chèn vào đây -->
+                </div>
+                <div class="cart-summary" id="cart-summary-container">
+                    <a href="main.html" class="continue-shopping">Tiếp tục mua hàng</a>
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Tạm tính:</span>
+                            <span id="subtotal-price">0đ</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Thành tiền:</span>
+                            <span id="total-price">0đ</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-checkout">THANH TOÁN NGAY</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer (Tái sử dụng) -->
+    <footer class="footer" style="background: #333; color: #fff;">
+       <!-- Dán code Footer đầy đủ của bạn vào đây -->
+       <div class="box-container" style="display:flex; justify-content:space-around; align-items:center; padding: 2rem 7%;">
+            <div>
+                <h3 style="color:#fff; font-size: 1.8rem;">ĐĂNG KÝ NHẬN TIN</h3>
+                <p style="color:#ccc; font-size: 1.4rem;">Các deal du lịch giảm giá đến 60% sẽ được gửi đến bạn</p>
+            </div>
+             <form action="" class="newsletter-form" style="display:flex;"> 
+                <input type="email" placeholder="Địa chỉ Email" style="padding:1.2rem; border-radius: .5rem 0 0 .5rem; width: 30rem; font-size: 1.5rem;"> 
+                <button type="submit" class="btn" style="border-radius: 0 .5rem .5rem 0;">Đăng ký</button> 
+            </form>
+            <div class="social-icons" style="font-size: 2.5rem;">
+                <a href="#" style="color:#fff; margin: 0 1rem;"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" style="color:#fff; margin: 0 1rem;"><i class="fab fa-twitter"></i></a>
+                <a href="#" style="color:#fff; margin: 0 1rem;"><i class="fab fa-instagram"></i></a>
+                <a href="#" style="color:#fff; margin: 0 1rem;"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dán vào trước thẻ </body> trong file cart.html -->
+
+<!-- ===== MODAL THANH TOÁN ===== -->
+<div class="modal-overlay" id="checkout-modal-overlay">
+    <div class="modal-content">
+        <span class="close-modal" id="close-checkout-modal">×</span>
+        <h2>Thông tin thanh toán</h2>
+        <form id="checkout-form">
+            <div class="form-group">
+                <label for="customer-name">Họ và tên</label>
+                <input type="text" id="customer-name" placeholder="Nguyễn Văn A" required>
+            </div>
+            <div class="form-group">
+                <label for="customer-phone">Số điện thoại</label>
+                <input type="tel" id="customer-phone" placeholder="09xxxxxxxx" required>
+            </div>
+            <div class="form-group">
+                <label for="customer-email">Email</label>
+                <input type="email" id="customer-email" placeholder="nguyenvana@example.com" required>
+            </div>
+             <div class="form-group">
+                <label for="customer-address">Địa chỉ</label>
+                <textarea id="customer-address" rows="3" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố"></textarea>
+            </div>
+            <button type="submit" class="btn btn-checkout">XÁC NHẬN ĐƠN HÀNG</button>
+        </form>
+    </div>
+</div>
+
+    <!-- Các file Script -->
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

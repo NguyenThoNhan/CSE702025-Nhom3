@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Đánh giá - Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="dark">
+    <div class="admin-layout">
+        <!-- Dán code Sidebar đã cập nhật vào đây -->
+        <aside class="sidebar">...</aside>
+        
+        <main class="main-content">
+            <!-- Dán code Header vào đây -->
+            <header class="main-header">...</header>
+
+            <div class="page-content">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Tất cả Đánh giá & Bình luận</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Tour ID</th>
+                                        <th>Người gửi</th>
+                                        <th>Đánh giá (Sao)</th>
+                                        <th style="width: 40%;">Bình luận</th>
+                                        <th>Ngày gửi</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="reviews-table-body">
+                                    <!-- Dữ liệu đánh giá sẽ được JS chèn vào đây -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+    <script src="reviews.js"></script>
+</body>
+</html>

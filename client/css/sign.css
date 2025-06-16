@@ -1,0 +1,243 @@
+/* sign.css (PHIÊN BẢN NÂNG CẤP HOÀN CHỈNH) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  background: #161a25;
+}
+
+/* Hiệu ứng nền Aurora Borealis */
+.background-container {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+.aurora {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.4;
+    filter: blur(80px); /* Hiệu ứng mờ ảo */
+}
+.aurora-1 { width: 400px; height: 400px; background-color: #7f5af0; top: 10%; left: 10%; animation: move 10s infinite alternate; }
+.aurora-2 { width: 300px; height: 300px; background-color: #2cb67d; top: 50%; left: 60%; animation: move 12s infinite alternate-reverse; }
+.aurora-3 { width: 250px; height: 250px; background-color: #0072ff; top: 20%; left: 80%; animation: move 8s infinite alternate; }
+
+@keyframes move {
+    from { transform: translate(0, 0) rotate(0deg); }
+    to { transform: translate(100px, 50px) rotate(30deg); }
+}
+
+
+/* Form Container với hiệu ứng Glassmorphism */
+.form-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 40px 35px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Tiêu đề Form */
+.auth-form h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #fffffe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.auth-form h2 i {
+    color: #7f5af0;
+}
+
+/* Ô nhập liệu với icon */
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-group .icon {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    color: #94a1b2;
+    transition: color 0.3s ease;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px 20px 15px 50px; /* Tăng padding để có không gian cho icon */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+  color: #fffffe;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #7f5af0;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px rgba(127, 90, 240, 0.3);
+}
+
+.form-group input:focus + .icon {
+    color: #7f5af0;
+}
+
+input::placeholder {
+  color: #94a1b2;
+}
+
+/* Nút bấm với hiệu ứng và icon */
+button.submit-btn,
+button.face-recognition-btn,
+button.close-webcam-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+button i {
+    z-index: 2;
+}
+button span {
+    z-index: 2;
+}
+
+button.submit-btn {
+  background: linear-gradient(45deg, #7f5af0, #4e2ecf);
+}
+button.submit-btn:hover {
+  box-shadow: 0 0 20px rgba(127, 90, 240, 0.5);
+  transform: translateY(-2px);
+}
+
+button.face-recognition-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+button.face-recognition-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Hiệu ứng gợn sóng khi click */
+button::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0.5;
+    transition: transform 0.5s, opacity 1s;
+}
+button:active::after {
+    transform: scale(100);
+    opacity: 0;
+}
+
+/* Link quay lại */
+a.back-link {
+  display: block;
+  margin-top: 25px;
+  text-align: center;
+  color: #94a1b2;
+  text-decoration: none;
+  font-size: 14px;
+}
+a.back-link:hover {
+  color: #fffffe;
+  text-decoration: underline;
+}
+
+/* Phần nhận diện khuôn mặt */
+#face-recognition-section {
+  margin-top: 20px;
+  text-align: center;
+}
+#face-recognition-section video {
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px rgba(127, 90, 240, 0.2);
+}
+.loading {
+  font-size: 14px;
+  color: #fffffe;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.loading i {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.close-webcam-btn {
+    background: #c72c41;
+}
+.close-webcam-btn:hover {
+    background: #a62334;
+}
+
+.switch-form-link {
+    margin-top: 25px;
+    text-align: center;
+    color: #94a1b2;
+    font-size: 14px;
+}
+.switch-form-link a {
+    color: #7f5af0;
+    font-weight: 600;
+    text-decoration: none;
+}
+.switch-form-link a:hover {
+    text-decoration: underline;
+}

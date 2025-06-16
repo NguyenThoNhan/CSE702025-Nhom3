@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evo Tour & Travel</title>
+
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Custom CSS File Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <header class="header">
+        <div class="header-main"> 
+            <a href="index.html" class="logo"> <img src="images/register.png" alt="Evo Tour Logo"> </a> 
+            <form action="" class="search-form"> <input type="search" name="search" id="search-box" placeholder="Nhập tên thành phố bạn muốn tới..."> <label for="search-box" class="fas fa-search"></label> </form> 
+            <div class="icons"> 
+                <a href="../client/index.html"><i class="fas fa-user"></i> Tài khoản</a> 
+                <a href="favorites.html"><i class="fas fa-heart"></i> Yêu thích <span class="badge" id="fav-count">0</span></a> 
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i> Giỏ hàng <span class="badge" id="cart-count">0</span></a> 
+            </div> 
+            <div id="menu-btn" class="fas fa-bars"></div> 
+        </div>
+        <nav class="navbar"> 
+            <ul> 
+                <li><a href="main.html">Trang chủ</a></li> 
+                <li><a href="#">Giới thiệu</a></li> 
+                <li class="dropdown"> <a href="#">Tour du lịch <i class="fas fa-angle-down"></i></a> 
+                    <ul class="dropdown-menu"> 
+                        <li><a href="tour-domestic.html">Tour trong nước</a></li> 
+                        <li><a href="tour-international.html">Tour nước ngoài</a></li> 
+                        <li><a href="404_page/cow-401page.html">Tour theo chủ đề</a></li> 
+                    </ul> 
+                </li> 
+                <li><a href="promotions.html">Tour khuyến mãi</a></li> 
+                <li><a href="news.html">Tin tức</a></li> 
+                <li><a href="dichvu/dichvu.html">Dịch vụ</a></li> 
+                <li><a href="404_page/cow-401page.html">FAQ</a></li> 
+                <li><a href="404_page/cow-401page.html">Liên hệ</a></li> 
+            </ul> 
+        </nav>
+    </header>
+
+    <!-- HOME SECTION STARTS -->
+    <section class="home" id="home">
+        <div class="video-container">
+            <video src="images/vid-5.mp4" loop autoplay muted></video>
+        </div>
+
+        <div class="content">
+            <h1>Đặt Tour du lịch!</h1>
+            <p>Hơn 300 tours du lịch ở Việt Nam và Quốc tế</p>
+        </div>
+
+        <div class="booking-form-container">
+            <form action="" class="booking-form">
+                <div class="input-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" placeholder="Bạn muốn đi đâu?">
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-calendar-alt"></i>
+                    <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Chọn ngày khởi hành">
+                </div>
+                <div class="input-box">
+                    <i class="fas fa-plane-departure"></i>
+                     <select>
+                        <option value="">Khởi hành từ</option>
+                        <option value="hcm">Hồ Chí Minh</option>
+                        <option value="hanoi">Hà Nội</option>
+                        <option value="danang">Đà Nẵng</option>
+                    </select>
+                </div>
+                <input type="submit" class="btn" value="TÌM">
+            </form>
+        </div>
+    </section>
+    <!-- HOME SECTION ENDS -->
+
+    <!-- PACKAGES SECTION STARTS -->
+    <section class="packages" id="packages">
+        <h1 class="heading">TOUR GIỜ CHÓT <span>GIÁ TỐT</span></h1>
+        <p class="sub-heading">Cùng Evo Tour điểm qua một vài địa điểm du lịch trong nước thu hút du khách nhất nhé!</p>
+
+        <div class="box-container">
+            <!-- Tour Card 1 -->
+            <div class="box">
+                <div class="image">
+                    <img src="images/p-1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Du lịch Ý [Rome - Pisa - Florence - Venice - Milan]</h3>
+                    <div class="details">
+                        <p class="schedule"><i class="fas fa-plane"></i> Lịch khởi hành: <span>Thứ 2 hàng tuần</span></p>
+                        <p class="duration"><i class="fas fa-clock"></i> Thời gian: <span>6 ngày 5 đêm</span></p>
+                    </div>
+                    <div class="price-box">
+                        <span class="price">46.900.000đ</span>
+                        <a href="tour-detail.html?id=tour-y" class="btn">Đặt tour</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tour Card 2 -->
+             <div class="box">
+                <div class="image">
+                    <img src="images/p-2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Du lịch Nam Phi [Johannesburg - Pretoria - Soweto - Cape Town]</h3>
+                    <div class="details">
+                        <p class="schedule"><i class="fas fa-plane"></i> Lịch khởi hành: <span>Thứ 7 hàng tuần</span></p>
+                        <p class="duration"><i class="fas fa-clock"></i> Thời gian: <span>5 ngày 4 đêm</span></p>
+                    </div>
+                    <div class="price-box">
+                        <span class="old-price">75.000.000đ</span>
+                        <span class="price">61.990.000đ</span>
+                        <a href="tour-detail.html?id=tour-nam-phi" class="btn">Đặt tour</a>
+                    </div>
+                </div>
+            </div>
+             <!-- Tour Card 3 -->
+             <div class="box">
+                <div class="image">
+                    <img src="images/p-3.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Du lịch Huế - Hồ Trươi - Đà Nẵng - Suối Khoáng Nóng Núi Thần Tài - Hội An</h3>
+                    <div class="details">
+                        <p class="schedule"><i class="fas fa-bus"></i> Lịch khởi hành: <span>Thứ 7 hàng tuần</span></p>
+                        <p class="duration"><i class="fas fa-clock"></i> Thời gian: <span>4 ngày 3 đêm</span></p>
+                    </div>
+                    <div class="price-box">
+                         <span class="old-price">6.200.000đ</span>
+                        <span class="price">5.900.000đ</span>
+                        <a href="tour-detail.html?id=tour-phu-quoc" class="btn">Đặt tour</a>
+                    </div>
+                </div>
+            </div>
+             <!-- Tour Card 4 -->
+             <div class="box">
+                <div class="image">
+                    <img src="images/p-4.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Du lịch Đà Nẵng - KDL Bà Nà - Hội An - Cố Đô Huế</h3>
+                    <div class="details">
+                        <p class="schedule"><i class="fas fa-bus"></i> Lịch khởi hành: <span>Thứ 7 hàng tuần</span></p>
+                        <p class="duration"><i class="fas fa-clock"></i> Thời gian: <span>3 ngày 2 đêm</span></p>
+                    </div>
+                    <div class="price-box">
+                         <span class="old-price">6.900.000đ</span>
+                        <span class="price">6.300.000đ</span>
+                        <a href="tour-detail.html?id=tour-da-nang" class="btn">Đặt tour</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PACKAGES SECTION ENDS -->
+
+    <!-- BANNER SECTION STARTS -->
+    <section class="banner">
+        <div class="banner-item">
+            <img src="images/g-9.jpg" alt="Khám phá Tây Bắc">
+        </div>
+         <div class="banner-item">
+            <img src="images/g-8.jpg" alt="Trải nghiệm miền Tây">
+        </div>
+    </section>
+    <!-- BANNER SECTION ENDS -->
+
+    <!-- DOMESTIC TOURS SECTION STARTS -->
+    <section class="packages">
+        <h1 class="heading">TOUR <span>TRONG NƯỚC</span></h1>
+        <p class="sub-heading">Tour du lịch Trong nước tại Evo Tour. Hành hương đầu xuân - Tận hưởng bản sắc Việt.</p>
+        <div class="box-container">
+            <!-- Add 8 more tour cards here using images g-1 to g-8 -->
+            <script>
+                // Use JS to quickly generate similar cards
+                const domesticTours = [
+                    { img: 'images/g-1.jpg', title: 'Du lịch Hà Nội - Ninh Bình - Cát Bà - Hạ Long - Hải Dương', price: '6.400.000đ', old_price: '7.500.000đ', duration: '4 ngày 3 đêm' },
+                    { img: 'images/g-2.jpg', title: 'Tour Phan Thiết Mũi Né Resort 3,4* - 3 ngày 2 đêm', price: '2.000.000đ', duration: '3 ngày 2 đêm' },
+                    { img: 'images/g-3.jpg', title: 'Du lịch Nha Trang - Hòn Tằm - KDL Vinpearl', price: '6.500.000đ', duration: '3 ngày 2 đêm' },
+                    { img: 'images/g-4.jpg', title: 'Du lịch Đà Lạt - Kdl Trang Trại Rau & Hoa - Đường Hầm Đất Sét', price: '4.000.000đ', old_price: '5.000.000đ', duration: '3 ngày 2 đêm' },
+                    { img: 'images/p-5.jpg', title: 'Du lịch Hồ Phú Ninh - Tam Thanh - Rừng Dừa Bảy Mẫu - Đà Nẵng - Hội An', price: '4.300.000đ', duration: '3 ngày 2 đêm' },
+                    { img: 'images/p-6.jpg', title: 'Du lịch Mỹ Tho - Cần Thơ - Cà Mau - Bạc Liêu - Sóc Trăng', price: '4.500.000đ', duration: '4 ngày 3 đêm' },
+                    { img: 'images/g-7.jpg', title: 'Du lịch Ninh Chữ - Vịnh Vĩnh Hy', price: '2.800.000đ', old_price: '4.300.000đ', duration: '2 ngày 1 đêm' },
+                    { img: 'images/g-5.jpg', title: 'Du lịch Phú Quốc Câu cá - Ngắm san hô', price: '3.500.000đ', duration: '3 ngày 2 đêm' }
+                ];
+
+                domesticTours.forEach(tour => {
+                    document.write(`
+                        <div class="box">
+                            <div class="image"> <img src="${tour.img}" alt=""> </div>
+                            <div class="content">
+                                <h3>${tour.title}</h3>
+                                <div class="details">
+                                    <p class="schedule"><i class="fas fa-bus"></i> Lịch khởi hành: <span>Thứ ${Math.floor(Math.random() * 6) + 2} hàng tuần</span></p>
+                                    <p class="duration"><i class="fas fa-clock"></i> Thời gian: <span>${tour.duration}</span></p>
+                                </div>
+                                <div class="price-box">
+                                    ${tour.old_price ? `<span class="old-price">${tour.old_price}</span>` : ''}
+                                    <span class="price">${tour.price}</span>
+                                    <a href="tour-detail.html?id=tour-phan-thiet" class="btn">Đặt tour</a>
+                                </div>
+                            </div>
+                        </div>
+                    `);
+                });
+            </script>
+        </div>
+                <div class="view-all-container">
+            <a href="#" class="btn">Xem tất cả Tour</a>
+        </div>
+    </section>
+    <!-- DOMESTIC TOURS SECTION ENDS -->
+
+    <!-- ===== SECTION MỚI: TOUR NƯỚC NGOÀI ===== -->
+    <section class="packages">
+        <h1 class="heading">TOUR <span>NƯỚC NGOÀI</span></h1>
+        <p class="sub-heading">Tour du lịch Nước ngoài tại Evo Tour. Trải nghiệm 5 châu - Khám phá thế giới.</p>
+        <div class="box-container">
+            <!-- Thêm các thẻ tour nước ngoài ở đây -->
+            <div class="box"> <div class="image"> <img src="images/g-8.jpg" alt=""> </div> <div class="content"> <h3>Tour Campuchia 4N3Đ: Bokor - Sihanouk Ville - Kohrong - Phnôm Pênh</h3> <div class="details"> <p class="schedule"><i class="fas fa-plane"></i> Lịch khởi hành: <span>Chủ nhật hàng tuần</span></p> <p class="duration"><i class="fas fa-clock"></i> Thời gian: <span>4 ngày 3 đêm</span></p> </div> <div class="price-box"> <span class="old-price">6.000.000đ</span> <span class="price">3.979.000đ</span> <a href="tour-detail.html?id=tour-anh-scotland" class="btn">Đặt tour</a> </div> </div> </div>
+            <div class="box"> <div class="image"> <img src="images/g-6.jpg" alt=""> </div> <div class="content"> <h3>Du thuyền 5 Sao Voyager Of The Seas</h3> <div class="details"> <p class="schedule"><i class="fas fa-ship"></i> Lịch khởi hành: <span>Thứ 4 hàng tuần</span></p> <p class="duration"><i class="fas fa-clock"></i> Thời gian: <span>4 ngày 3 đêm</span></p> </div> <div class="price-box"> <span class="price">25.900.000đ</span> <a href="tour-detail.html?id=tour-y" class="btn">Đặt tour</a> </div> </div> </div>
+            <div class="box"> <div class="image"> <img src="images/p-1.jpg" alt=""> </div> <div class="content"> <h3>Du lịch Ý [Rome - Pisa - Florence - Venice - Milan]</h3> <div class="details"> <p class="schedule"><i class="fas fa-plane"></i> Lịch khởi hành: <span>Thứ 2 hàng tuần</span></p> <p class="duration"><i class="fas fa-clock"></i> Thời gian: <span>6 ngày 5 đêm</span></p> </div> <div class="price-box"> <span class="price">46.900.000đ</span> <a href="tour-detail.html?id=tour-y" class="btn">Đặt tour</a> </div> </div> </div>
+            <div class="box"> <div class="image"> <img src="images/p-2.jpg" alt=""> </div> <div class="content"> <h3>Du lịch Anh - Scotland [Lễ hội hoa Chelsea]</h3> <div class="details"> <p class="schedule"><i class="fas fa-plane"></i> Lịch khởi hành: <span>Thứ 7 hàng tuần</span></p> <p class="duration"><i class="fas fa-clock"></i> Thời gian: <span>6 ngày 7 đêm</span></p> </div> <div class="price-box"> <span class="price">89.990.000đ</span> <a href="tour-detail.html?id=tour-anh-scotland" class="btn">Đặt tour</a> </div> </div> </div>
+            <div class="box"> <div class="image"> <img src="images/g-3.jpg" alt=""> </div> <div class="content"> <h3>Du lịch Châu Âu Pháp - Thụy Sỹ - Núi Jungfrau - Ý</h3> <div class="details"> <p class="schedule"><i class="fas fa-plane"></i> Lịch khởi hành: <span>Chủ nhật hàng tuần</span></p> <p class="duration"><i class="fas fa-clock"></i> Thời gian: <span>4 ngày 3 đêm</span></p> </div> <div class="price-box"> <span class="old-price">72.000.000đ</span> <span class="price">3.979.000đ</span> <a href="tour-detail.html?id=tour-y" class="btn">Đặt tour</a> </div> </div> </div>
+            <div class="box"> <div class="image"> <img src="images/g-4.jpg" alt=""> </div> <div class="content"> <h3>Du lịch Nam Phi [Johannesburg - Pretoria - Soweto - Cape Town]</h3> <div class="details"> <p class="schedule"><i class="fas fa-ship"></i> Lịch khởi hành: <span>Thứ 4 hàng tuần</span></p> <p class="duration"><i class="fas fa-clock"></i> Thời gian: <span>5 ngày 4 đêm</span></p> </div> <div class="price-box"> <span class="price">29.900.000đ</span> <a href="tour-detail.html?id=tour-nam-phi" class="btn">Đặt tour</a> </div> </div> </div>
+            <div class="box"> <div class="image"> <img src="images/p-5.jpg" alt=""> </div> <div class="content"> <h3>Du lịch Pháp - Bỉ - Hà Lan [Hội Hoa Tulip Keukenhof]</h3> <div class="details"> <p class="schedule"><i class="fas fa-plane"></i> Lịch khởi hành: <span>Thứ 3 hàng tuần</span></p> <p class="duration"><i class="fas fa-clock"></i> Thời gian: <span>6 ngày 5 đêm</span></p> </div> <div class="price-box"> <span class="price">56.900.000đ</span> <a href="tour-detail.html?id=tour-anh-scotland" class="btn">Đặt tour</a> </div> </div> </div>
+            <div class="box"> <div class="image"> <img src="images/p-6.jpg" alt=""> </div> <div class="content"> <h3>Du lịch Anh - Scotland [Lễ hội hoa Chelsea]</h3> <div class="details"> <p class="schedule"><i class="fas fa-plane"></i> Lịch khởi hành: <span>Chủ Nhật hàng tuần</span></p> <p class="duration"><i class="fas fa-clock"></i> Thời gian: <span>9 ngày 8 đêm</span></p> </div> <div class="price-box"> <span class="price">99.990.000đ</span> <a href="tour-detail.html?id=tour-anh-scotland" class="btn">Đặt tour</a> </div> </div> </div>
+        </div>
+        <!-- BỔ SUNG NÚT XEM TẤT CẢ -->
+        <div class="view-all-container">
+            <a href="#" class="btn">Xem tất cả Tour</a>
+        </div>
+    </section>
+
+    <!-- DESTINATIONS SECTION STARTS -->
+    <section class="destinations" id="destinations">
+        <h1 class="heading">ĐIỂM ĐẾN <span>YÊU THÍCH</span></h1>
+        <p class="sub-heading">Các điểm đến du lịch trong nước và nước ngoài</p>
+        <div class="box-container">
+            <div class="box large">
+                <img src="images/g-1.jpg" alt="Vịnh Hạ Long">
+                <div class="info">
+                    <h3>Vịnh Hạ Long</h3>
+                    <p>Đã có 1,800+ lượt khách</p>
+                </div>
+            </div>
+             <div class="box large">
+                <img src="images/g-9.jpg" alt="Sapa">
+                <div class="info">
+                    <h3>Sapa</h3>
+                    <p>Đã có 1,200+ lượt khách</p>
+                </div>
+            </div>
+             <div class="box large">
+                <img src="images/g-6.jpg" alt="Đà Nẵng">
+                <div class="info">
+                    <h3>Đà Nẵng</h3>
+                    <p>Đã có 1,800+ lượt khách</p>
+                </div>
+            </div>
+             <div class="box large">
+                <img src="images/g-5.jpg" alt="Nha Trang">
+                <div class="info">
+                    <h3>Nha Trang</h3>
+                    <p>Đã có 2,200+ lượt khách</p>
+                </div>
+            </div>
+            <div class="box small">
+                <img src="images/p-1.jpg" alt="Châu Âu">
+                <div class="info small">
+                    <h3>Châu Âu</h3>
+                    <p>Khám phá ngay <i class="fas fa-arrow-right"></i></p>
+                </div>
+            </div>
+             <div class="box small">
+                <img src="images/p-6.jpg" alt="Châu Á">
+                <div class="info small">
+                    <h3>Châu Á</h3>
+                    <p>Khám phá ngay <i class="fas fa-arrow-right"></i></p>
+                </div>
+            </div>
+             <div class="box small">
+                <img src="images/p-2.jpg" alt="Châu Úc">
+                <div class="info small">
+                    <h3>Châu Úc</h3>
+                    <p>Khám phá ngay <i class="fas fa-arrow-right"></i></p>
+                </div>
+            </div>
+             <div class="box small">
+                <img src="images/g-7.jpg" alt="Châu Mỹ">
+                <div class="info small">
+                    <h3>Châu Mỹ</h3>
+                    <p>Khám phá ngay <i class="fas fa-arrow-right"></i></p>
+                </div>
+            </div>
+             <div class="box small">
+                <img src="images/g-8.jpg" alt="Châu Phi">
+                <div class="info small">
+                    <h3>Châu Phi</h3>
+                    <p>Khám phá ngay <i class="fas fa-arrow-right"></i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- DESTINATIONS SECTION ENDS -->
+
+        <footer class="footer">
+        <div class="box-container"> 
+            <div class="box"> 
+                <h3>Về chúng tôi</h3> 
+                <a href="#">Giới thiệu</a> 
+                <a href="#">Tuyển dụng</a> 
+                <a href="#">Điều khoản dịch vụ</a> 
+                <a href="#">Chính sách bảo mật</a> 
+            </div> 
+            <div class="box"> 
+                <h3>Hỗ trợ khách hàng</h3> 
+                <a href="#">Hướng dẫn đặt tour</a> 
+                <a href="#">Chính sách hoàn hủy</a> 
+                <a href="#">Câu hỏi thường gặp</a> 
+                <a href="#">Liên hệ</a> 
+            </div> 
+            <div class="box"> 
+                <h3>Theo dõi chúng tôi</h3> 
+                <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a> 
+                <a href="#"><i class="fab fa-youtube"></i> Youtube</a> 
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a> 
+                <a href="#"><i class="fab fa-tiktok"></i> Tiktok</a> 
+            </div> 
+            <div class="box"> 
+                <h3>Đăng ký nhận tin</h3> 
+                <p>Nhập email để không bỏ lỡ các chương trình khuyến mãi hấp dẫn</p> 
+                <form action="" class="newsletter-form"> 
+                    <input type="email" placeholder="Nhập email của bạn"> 
+                    <button type="submit" class="btn">Đăng ký</button> 
+                </form> 
+            </div> 
+        </div>
+        <div class="credit">© 2025 <span>Evo Tour</span>. All rights reserved.</div>
+    </footer>
+
+    <!-- Custom JS File Link -->
+    <script src="script.js"></script>
+</body>
+</html>

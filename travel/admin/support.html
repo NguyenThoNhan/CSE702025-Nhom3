@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chăm sóc Khách hàng - Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="dark">
+    <div class="admin-layout">
+        <!-- Dán code Sidebar đã cập nhật vào đây -->
+        <aside class="sidebar">...</aside>
+        
+        <main class="main-content">
+            <!-- Dán code Header vào đây -->
+            <header class="main-header">...</header>
+
+            <div class="page-content">
+                <div class="support-layout">
+                    <!-- Cột danh sách các cuộc hội thoại -->
+                    <div class="ticket-list-container card">
+                        <div class="card-header">
+                            <h3>Yêu cầu Hỗ trợ</h3>
+                        </div>
+                        <div class="ticket-list" id="ticket-list">
+                            <!-- Các ticket sẽ được JS chèn vào đây -->
+                        </div>
+                    </div>
+                    <!-- Cột chi tiết cuộc hội thoại -->
+                    <div class="chat-detail-container card">
+                        <div class="chat-placeholder" id="chat-placeholder">
+                            <i class="fas fa-headset"></i>
+                            <p>Chọn một yêu cầu để xem chi tiết</p>
+                        </div>
+                        <div class="chat-box" id="chat-box" style="display: none;">
+                            <div class="chat-header">
+                                <h4 id="chat-customer-name"></h4>
+                                <span id="chat-ticket-status"></span>
+                            </div>
+                            <div class="chat-messages" id="chat-messages">
+                                <!-- Tin nhắn sẽ được JS chèn vào đây -->
+                            </div>
+                            <div class="chat-reply-form">
+                                <textarea id="reply-message" placeholder="Nhập câu trả lời của bạn..."></textarea>
+                                <button id="send-reply-btn" class="btn-primary">Gửi trả lời</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="admin.js"></script>
+    <script src="support.js"></script>
+</body>
+</html>

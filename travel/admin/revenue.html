@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doanh thu & Đơn hàng - Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <div class="admin-layout">
+        <!-- Dán code <aside class="sidebar">...</aside> từ index.html vào đây -->
+        <aside class="sidebar"> <div class="sidebar-header"> <a href="#" class="logo"> <img src="../images/register.png" alt="Logo"> <span>Evo Tour</span> </a> </div> <nav class="sidebar-nav"> <ul> <li class="nav-title">MENU</li> <li><a href="admin.html"><i class="fas fa-tachometer-alt"></i> Bảng điều khiển</a></li> <li><a href="customers.html"><i class="fas fa-users"></i> Quản lý khách hàng</a></li> <li><a href="products.html"><i class="fas fa-box-open"></i> Quản lý sản phẩm</a></li> <li class="active"><a href="revenue.html"><i class="fas fa-file-invoice-dollar"></i> Quản lý đơn hàng</a></li> <li><a href="#"><i class="fas fa-robot"></i> Quản lý chatbot</a></li> <li class="nav-title">Báo cáo</li> <li><a href="revenue.html"><i class="fas fa-chart-line"></i> Quản lý doanh thu</a></li> <li><a href="revenue.html"><i class="fas fa-chart-pie"></i> Báo cáo</a></li> </ul> </nav> </aside>
+
+        <main class="main-content">
+            <!-- Dán code <header class="main-header">...</header> từ index.html vào đây -->
+            <header class="main-header"> <div class="header-left"> <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button> <div class="search-box"> <i class="fas fa-search"></i> <input type="text" placeholder="Search..."> </div> </div> <div class="header-right"> <div class="theme-switcher"> <i class="fas fa-sun"></i> <label class="switch"> <input type="checkbox" id="theme-toggle"> <span class="slider round"></span> </label> <i class="fas fa-moon"></i> </div> <div class="user-profile"> <img src="../images/g-2.jpg" alt="Admin Avatar"> </div> </div> </header>
+
+            <div class="page-content">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Danh sách Đơn hàng</h3>
+                        <p>Tổng doanh thu: <b id="total-revenue">0đ</b></p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID Đơn hàng</th>
+                                        <th>Ngày đặt</th>
+                                        <th>Khách hàng</th>
+                                        <th>Email</th>
+                                        <th>Tổng tiền</th>
+                                        <th>Trạng thái</th>
+                                        <th>Hành động</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="orders-table-body">
+                                    <!-- Dữ liệu sẽ được JS chèn vào đây -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../database.js"></script>
+    <script src="revenue.js"></script>
+    <script src="admin.js"></script> <!-- Script chung vẫn cần -->
+</body>
+</html>

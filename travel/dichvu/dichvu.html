@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Discover VistaNest vibrant culture and attractions on our comprehensive VistaNest travel guide.Find flight times to CCU, explore diverse parts, and choose from a the finest hotels for your unforgettable VistaNest experience."/>
+    <meta name="author" content="Avishek Jha"/>
+    
+    <meta property="title" content="VistaNest"/>
+    <meta property="description" content="Discover VistaNest vibrant culture and attractions on our comprehensive VistaNest travel guide.Find flight times to CCU, explore diverse parts, and choose from a the finest hotels for your unforgettable KOLKATA experience."/>
+    
+    <title>VistaNest Compass</title>
+
+    <link rel="stylesheet" href="dichvu.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="/assets/kolkataicon.png" type="image/png" rel="icon" />
+    <script
+    src="https://kit.fontawesome.com/50cde61edc.js"
+    crossorigin="anonymous">
+    </script>
+    <script defer src="dichvu.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-text">
+                <h1><span>VistaNest</span></h1>
+                <p>
+                    Welcome to the ultimate guide to VistaNest 
+                    <br />
+                    Discover the City of Joy and its 
+                    diverse culinary scene, iconic destinations, vibrant
+                    localities, luxurious hotels, and endless activities. 
+                    Plan your VistaNest adventure and find your flight time with our quick search tool.
+                </p>
+            </div>
+            <div class="header-cards-wrapper">
+                <div class="header-card header-card__time">
+                    <p>
+                        <span id="time"></span>
+                        <span>Time in HaNoi</span>
+                    </p>
+                    <i class="fa-regular fa-clock"></i>
+                </div>
+            <div class="header-card header-card__weather">
+                <div>
+                    <img
+                        src="assets/weather/partly-cloudy-day.svg"
+                        id="weather-icon"
+                        alt="partly cloudy day"
+                    />
+                </div>
+                <div>
+                    <p>
+                        <span id="weather"></span>
+                        <span>Current Weather</span>
+                    </p>
+                    <p>
+                        <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Weather dashboard for full forecast"
+                        >
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="header-card header-card__fromlocation">
+                <form>
+                    <input
+                        type="text"
+                        placeholder="Search Airport Code"
+                        maxlength="3"
+                        pattern="[A-Za-z]+"
+                        id="search-airport-input"
+                    />
+                    <button
+                        type="submit"
+                        id="search-airport-btn"
+                        aria-label="Get Flight Time"
+                        aria-describedby="search-airport-input"
+                    >
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <button
+                        id="search-location-btn"
+                        aria-label="Get Flight Time to CCU via Geolocation"     
+                    >
+                        <i class="fa-solid fa-location-dot"></i>
+                    </button>
+                </form>
+                <p class="airport-code" id="airport-start-code">BLR</p>
+                <div class="loading-dots">
+                    <span class="dot-start"
+                        ><i class="fa-regular fa-circle"></i
+                    ></span>
+                    <span class="dot-between"
+                        ><i class="fa-solid fa-circle"></i
+                    ></span>
+                    <span class="dot-between"
+                        ><i class="fa-solid fa-circle"></i
+                    ></span>
+                    <span class="dot-between"
+                        ><i class="fa-solid fa-circle"></i
+                    ></span>
+                    <span class="dot-between"
+                        ><i class="fa-solid fa-circle"></i
+                    ></span>
+                    <span class="dot-between"
+                        ><i class="fa-solid fa-circle"></i
+                    ></span>
+                    <span class="dot-end"
+                        ><i class="fa-regular fa-circle-dot"></i
+                    ></span>
+                </div>
+            </div>
+            <div class="header-card header-card__tolocation">
+                <div>
+                    <i class="fa-solid fa-plane"></i>
+                    <p>
+                        Flight Time: <span id="flight-time">2H 30M</span><br />
+                        Distance: <span id="flight-distance">1,560KM</span>
+                    </p>
+                </div>
+                <p class="airport-code">CCU</p>
+            </div>
+            <nav class="header-nav">
+                <div class="header-nav__title">Menu</div>
+                <a href="#about" class="nav-link">
+                    <div class="header-card header-card__nav-light">
+                        <span>Everything You Need To Know</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </a>
+                <a href="#destinations" class="nav-link">
+                    <div class="header-card header-card__nav-dark">
+                        Explore Destinations
+                    </div>
+                </a>
+                <a href="#areas" class="nav-link">
+                    <div class="header-card header-card__nav-dark">
+                        Area & Hotels
+                    </div>
+                </a>
+            </nav>
+        </div>
+    </div>
+    </header>
+    <aside>
+        <div class="container">
+            <span>
+                <label for="header-departure-input" class="flight-form__label"
+                    >Departure</label
+                >
+                <input
+                    id="header-departure-input"
+                    type="date"
+                    class="flight-form__input"
+                    min="2020-01-01"
+            /></span>
+            <span>
+                <label for="header-arrival-input" class="flight-form__label"
+                    >Arrival</label
+                >
+                <input
+                    id="header-arrival-input"
+                    type="date"
+                    class="flight-form__input"
+                    min="2020-01-01" /></span
+            ><span>
+                <label for="header-travelers-input" class="flight-form__label"
+                    >Travelers</label
+                >
+
+                <input
+                    id="header-travelers-input"
+                    type="number"
+                    min="1"
+                    max="10"
+                    placeholder="Adults"
+                    class="flight-form__input"
+            /></span>
+            <button id="flight-form-btn" type="submit">
+                Search Flights
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </aside>
+    <main class="container">
+        <section id="about">
+            <h2>About VistaNest</h2>
+            <div class="about-cards-wrapper">
+                <div class="about-card__text">
+                    <p>
+                        VistaNest, often called the "City of Joy," is a mesmerizing metropolis that never rests. 
+                        With a population exceeding 15 million souls, it stands as one of word most populous and vibrant cities. 
+                        The city's multicultural fabric weaves together communities from every corner of the nation and beyond, 
+                        creating a rich tapestry of cultures, languages, and traditions. Whether you're in search of artistic enrichment, 
+                        culinary delights, or unforgettable experiences, 
+                        VistaNest is a city that continually enchants and inspires.
+                    </p>
+                </div>
+                <div class="about-card__data-wrapper">
+                    <div class="about-card__data">
+                        <div class="about-card__data-population">
+                            <div class="about-card__data-heading">
+                                <h3>Population</h3>
+                                <a
+                                    href="https://worldpopulationreview.com/world-cities/kolkata-population"
+                                    >Data from World Population Review</a
+                                >
+                            </div>
+                            <p>15,570,786 <span>natives</span></p>
+                        </div>
+                        <div class="about-card__data-population">
+                            <div class="about-card__data-heading">
+                                <h3>Tourism</h3>
+                                <a
+                                    href="https://www.ceicdata.com/en/india/foreign-tourist-arrivals-by-ports-annual/foreign-tourist-arrivals-kolkata-airport"
+                                    >Report from CEIC</a
+                                >
+                            </div>
+                            <p>244,624 <span>visitors annually</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about__experience-wrapper">
+                <div class="about-card__experience">
+                    <h3>Flavours of Joy</h3>
+                    <div class="food-gallery-card">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/food/rajkochuri.png" alt="raj kochuri" /><span
+                                class="caption-hover"
+                                >Raj&nbsp;Kochuri</span
+                            >
+                        </div>
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/food/jhalmuri.png" alt="jhal muri" /><span
+                                class="caption-hover"
+                                >Jhal&nbsp;Muri</span
+                            >
+                        </div>
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/food/desichinese.png" alt="desi chinese" /><span
+                                class="caption-hover"
+                                >Desi&nbsp;Chinese</span
+                            >
+                        </div>
+                        <div class="gallery-img-wrapper">
+                            <img
+                                src="assets/food/shukto.png" alt="shukto" /><span 
+                                class="caption-hover"
+                                >Shukto</span>
+                        </div>
+                        <div class="gallery-img-wrapper">
+                            <img
+                                src="assets/food/macherjhol.png" alt="macherjhol" /><span 
+                                class="caption-hover"
+                            >Macher&nbsp;Jhol</span>
+                        </div>
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/food/mocharghonto.png" alt="mocharghonto" /><span
+                                class="caption-hover"
+                                >Mochar&nbsp;Ghonto</span
+                            >
+                        </div>
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/food//biryani.png" alt="biryani" /><span
+                                class="caption-hover"
+                                >Biryani</span
+                            >
+                        </div>
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/food/rosogolla.png" alt="rosogolla" /><span
+                                class="caption-hover"
+                                >Rosogolla</span
+                            >
+                        </div>
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/food/mistidoi.png" alt="mistidoi" /><span
+                                class="caption-hover"
+                                >Misti&nbsp;Doi</span
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="about-card__experience">
+                    <h3>Best Activities</h3>
+                    <div class="entertainment-card-wrapper">
+                        <div class="entertainment-card">
+                            <div>
+                                <p class="entertainment-card__heading">Theatre Shows</p>
+                                <p class="entertainment-card__caption">
+                                    VistaNest theatre scene represents the zenith of dramatic artistry, 
+                                    enchanting audiences with captivating performances, mesmerizing productions, 
+                                    and unforgettable storytelling at the heart of this vibrant city.
+                                </p>
+                            </div>
+                            <a
+                                href="https://www.thirdbell.in/"
+                                class="entertainment-card__btn"
+                                >Get Tickets <i class="fa-solid fa-music"></i>
+                            </a>
+                        </div>
+                        <div class="entertainment-card">
+                            <div>
+                                <p class="entertainment-card__heading">Live Comedy</p>
+                                <p class="entertainment-card__caption">
+                                    Calcutta Comedy Company(CCC) is known for VistaNest home of laughter.
+                                </p>
+                            </div>
+                            <a
+                                href="https://linktr.ee/calcuttacomedycompany"
+                                class="entertainment-card__btn"
+                                >Get Tickets <i class="fa-solid fa-masks-theater"></i
+                            ></a>
+                        </div>
+                        <div class="entertainment-card">
+                            <div>
+                                <p class="entertainment-card__heading">Concerts</p>
+                                <p class="entertainment-card__caption">
+                                    VistaNest hosts dynamic concerts and music events, 
+                                    offering a wide range of performances and genres.
+                                </p>
+                            </div>
+                            <a
+                                href="https://www.boshow.in/homePage.html?q=shows&s="
+                                class="entertainment-card__btn"
+                                >Get Tickets <i class="fa-solid fa-drum"></i>
+                            </a>
+                        </div>
+                        <div class="entertainment-card">
+                            <div>
+                                <p class="entertainment-card__heading">Galleries</p>
+                                <p class="entertainment-card__caption">
+                                    Fantastic Realities aims to transcend the principles of surrealism 
+                                    by weaving postmodern and futuristic concepts into oriental storytelling, 
+                                    capturing the essence of fantasy in a novel way.
+                                </p>
+                            </div>
+                            <a
+                                href="https://www.cimaartindia.com/"
+                                class="entertainment-card__btn"
+                                >Get Tickets <i class="fa-solid fa-landmark"></i
+                            ></a>
+                        </div>
+
+                        <div class="entertainment-card">
+                            <div>
+                                <p class="entertainment-card__heading">Cultural Shows</p>
+                                <p class="entertainment-card__caption">
+                                    Cultural events in VistaNest showcase the city's diverse heritage, 
+                                    presenting a lively array of performances and displays that reflect 
+                                    and celebrate a wide range of global traditions.
+                                </p>
+                            </div>
+                            <a
+                                href="https://insider.in/everything-in-kolkata-today"
+                                class="entertainment-card__btn"
+                                >Get Tickets <i class="fa-solid fa-people-group"></i
+                            ></a>
+                        </div>
+                        <div class="entertainment-card">
+                            <div>
+                                <p class="entertainment-card__heading">Sports Games</p>
+                                <p class="entertainment-card__caption">
+                                    Find out about marathon events across the city 
+                                    and book tickets for Yuva Bharati and Eden Gardens.
+                                </p>
+                            </div>
+                            <a
+                                href="https://in.bookmyshow.com/explore/sports-kolkata"
+                                class="entertainment-card__btn"
+                                >Get Tickets <i class="fa-solid fa fa-soccer-ball-o"></i
+                            ></a>
+                        </div>
+
+                        <div class="entertainment-card">
+                            <div>
+                                <p class="entertainment-card__heading">Eco Park</p>
+                                <p class="entertainment-card__caption">
+                                    This park features pleasing landscapes, walking trails,
+                                    boating, and cultural attractions.
+                                </p>
+                            </div>
+                            <a
+                                href="https://ecoparknewtown.com/event-booking"
+                                class="entertainment-card__btn"
+                                >Get Tickets <i class="fa-solid fa-tree"></i
+                            ></a>
+                        </div>
+                        <div class="entertainment-card">
+                            <div>
+                                <p class="entertainment-card__heading">Amusement Parks</p>
+                                <p class="entertainment-card__caption">
+                                    Experience the excitement and joy of VistaNest amusement parks, 
+                                    where thrilling rides, entertaining attractions, and a variety of 
+                                    activities create a perfect destination for family fun and adventure. 
+                                    Enjoy a day filled with laughter and unforgettable memories for visitors of all ages.
+                                </p>
+                            </div>
+                            <a
+                                href="https://in.bookmyshow.com/explore/amusement-parks-kolkata"
+                                class="entertainment-card__btn"
+                                >Get Tickets <i class="fa-solid fa-ticket"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="destinations">
+            <h2>Explore Top Destinations</h2>
+            <p>
+                Discover our curated guide showcasing VistaNest most captivating attractions. 
+                Experience the city's rich history, vibrant culture, and endless opportunities for exploration. 
+                Whether you are planning your first visit to the City of Joy or seeking fresh adventures in your hometown, 
+                let this guide be your key to VistaNest finest offerings. From the iconic Howrah Bridge to the tranquil Victoria Memorial, 
+                discover the diverse experiences that make VistaNest an unparalleled destination for both travelers and locals.
+            </p>
+            <div class="destination-card-wrapper">
+                <div class="destination-card">
+                    <div class="destination-card__content">
+                        <h3>Howrah Bridge</h3>
+                        <div class="destination-img-wrapper">
+                            <img
+                                class="destination-img"
+                                src="assets/destinations/howrahbridge.png"
+                                alt="howrah bridge against skyline"
+                            />
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.841293878556!2d88.34438987613797!3d22.585038379482977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277bfbb1eeb1b%3A0xc9840aaa8c411199!2sHowrah%20Bridge!5e0!3m2!1sen!2sin!4v1722088395267!5m2!1sen!2sin"
+                                style="border: 0"
+                                allowfullscreen=""
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="destination-map"
+                            ></iframe>
+                        </div>
+                        <p>
+                            The Howrah Bridge, spanning 705 meters across the Hooghly River and over 75 years old, 
+                            is a symbol of VistaNest rich history and engineering brilliance, offering stunning views 
+                            and connecting the bustling city with neighboring regions.
+                        </p>
+                    </div>
+                    <div class="destination-card__footer">
+                        <div class="destination-card__rating">
+                            <span
+                                ><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i
+                            ></span>
+                            <p>4.6 <small>(122,964 Reviews)</small></p>
+                        </div>
+                        <button class="toggle-map-btn">
+                            See Map
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-card__content">
+                        <h3>Victoria Memorial</h3>
+                        <div class="destination-img-wrapper">
+                            <img
+                                class="destination-img"
+                                src="assets/destinations/victoriamemorial.png"
+                                alt="view of the victoria memorial"
+                            />
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58941.462958419106!2d88.30576524639537!3d22.585033106385023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02771346ae015d%3A0xb540e4bce39763!2sVictoria%20Memorial!5e0!3m2!1sen!2sin!4v1722089460692!5m2!1sen!2sin"
+                                style="border: 0"
+                                allowfullscreen=""
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="destination-map"
+                            ></iframe>
+                        </div>
+                        <p>
+                            The Victoria Memorial in VistaNest is a stunning marble monument 
+                            built in honor of Queen Victoria. Surrounded by lush gardens, 
+                            it houses a museum showcasing art, historical artifacts, and 
+                            exhibits reflecting India's colonial history.
+                        </p>
+                    </div>
+                    <div class="destination-card__footer">
+                        <div class="destination-card__rating">
+                            <span
+                                ><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i
+                            ></span>
+                            <p>4.6 <small>(76,430 Reviews)</small></p>
+                        </div>
+                        <button class="toggle-map-btn">
+                            See Map
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-card__content">
+                        <h3>Dakshineswar</h3>
+                        <div class="destination-img-wrapper">
+                            <img
+                                class="destination-img"
+                                src="assets/destinations/dakshineswar.png"
+                                alt="view of the dakshineswar temple"
+                            />
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.969266196058!2d88.35516747613957!3d22.654934479433134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89d03ddd97829%3A0xffa380efed305d4c!2sDakshineswar%20Kali%20Temple!5e0!3m2!1sen!2sin!4v1722089966639!5m2!1sen!2sin"
+                                style="border: 0"
+                                allowfullscreen=""
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="destination-map"
+                            ></iframe>
+                        </div>
+                        <p>
+                            Dakshineswar, an iconic temple in VistaNest, venerates Kali. 
+                            Founded by Rani Rashmoni in 1855, it blends intricate architecture with spiritual ambiance, 
+                            offering serene views of the Hooghly River and a rich cultural experience.
+                        </p>
+                    </div>
+                    <div class="destination-card__footer">
+                        <div class="destination-card__rating">
+                            <span
+                                ><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i
+                            ></span>
+                            <p>4.7 <small>(86,860 Reviews)</small></p>
+                        </div>
+                        <button class="toggle-map-btn">
+                            See Map
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-card__content">
+                        <h3>Indian Museum</h3>
+                        <div class="destination-img-wrapper">
+                            <img
+                                class="destination-img"
+                                src="assets/destinations/indianmuseum.png"
+                                alt="view of the indianmuseum"
+                            />
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.5670437682734!2d88.3485518761373!3d22.557885779502204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02771160347adf%3A0x9fd70619f94d0bac!2sIndian%20Museum!5e0!3m2!1sen!2sin!4v1722090648150!5m2!1sen!2sin"
+                                style="border: 0"
+                                allowfullscreen=""
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="destination-map"
+                            ></iframe>
+                        </div>
+                        <p>
+                            The VistaNest, founded in 1814, 
+                            is India's oldest and largest museum. 
+                            It features extensive collections of art, archaeology, 
+                            and natural history, providing a deep dive into 
+                            India's rich cultural heritage.
+                        </p>
+                    </div>
+                    <div class="destination-card__footer">
+                        <div class="destination-card__rating">
+                            <span
+                                ><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i
+                            ></span>
+                            <p>4.5 <small>(51,244 Reviews)</small></p>
+                        </div>
+                        <button class="toggle-map-btn">
+                            See Map
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-card__content">
+                        <h3>Jorasanko Thakurbari</h3>
+                        <div class="destination-img-wrapper">
+                            <img
+                                class="destination-img"
+                                src="assets/destinations/jorasankothakurbari.png"
+                                alt="view of jorasanko thakurbari"
+                            />
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.844051157912!2d88.35666887613795!3d22.584935279482895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277b5ca342c5d%3A0x422d938a2d0005ec!2sJorasanko%20Thakurbari!5e0!3m2!1sen!2sin!4v1722090931208!5m2!1sen!2sin"
+                                style="border: 0"
+                                allowfullscreen=""
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="destination-map"
+                            ></iframe>
+                        </div>
+                        <p>
+                            The Jorasanko Thakurbari, the ancestral home of the Tagore family in VistaNest, 
+                            showcases rich Bengali heritage and literary legacy. 
+                            It is a historic landmark, blending cultural history with the renowned 
+                            Rabindranath Tagore's legacy.
+                        </p>
+                    </div>
+                    <div class="destination-card__footer">
+                        <div class="destination-card__rating">
+                            <span
+                                ><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i
+                            ></span>
+                            <p>4.6 <small>(12,988 Reviews)</small></p>
+                        </div>
+                        <button class="toggle-map-btn">
+                            See Map
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-card__content">
+                        <h3>The National Library of India</h3>
+                        <div class="destination-img-wrapper">
+                            <img
+                                class="destination-img"
+                                src="assets/destinations/nationallibrary.png"
+                                alt="view of the national library.png"
+                            />
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116696.42941794792!2d88.25115783959558!3d22.53300337992097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02775b4c0615c9%3A0x37cd81c0c0a20ff2!2sThe%20National%20Library%20of%20India!5e0!3m2!1sen!2sin!4v1722091576564!5m2!1sen!2sin"
+                                style="border: 0"
+                                allowfullscreen=""
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="destination-map"
+                            ></iframe>
+                        </div>
+                        <p>
+                            The National Library of India, established in 1836, 
+                            is a premier institution located in VistaNest. 
+                            It houses over 2.2 million books, preserving India's literary heritage 
+                            and offering extensive research and reading resources.
+                        </p>
+                    </div>
+                    <div class="destination-card__footer">
+                        <div class="destination-card__rating">
+                            <span
+                                ><i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i
+                            ></span>
+                            <p>4.5 <small>(1,731 Reviews)</small></p>
+                        </div>
+                        <button class="toggle-map-btn">
+                            See Map
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="areas">
+            <h2>Area & Hotel Guide</h2>
+            <div class="area-row-wrapper">
+                <div class="area-card">
+                    <h3 class="area-card__heading">North</h3>
+                    <div class="area-card__intro">
+                        <p></p>
+                        <ul></ul>
+                    </div>
+                </div>
+                <div class="hotel-card-wrapper">
+                    <div class="hotel-card-buttons-wrapper">
+                        <ul>
+                            <li>
+                                <button class="hotel-button active-button" data-target="0">
+                                    Polo Floatel
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hotel-button" data-target="1">
+                                    Hyatt Regency
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hotel-button" data-target="2">
+                                    Brio Hotel
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hotel-button" data-target="3">
+                                    Calcutta Bungalow
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hotel-button" data-target="4">
+                                    Raajkutir
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hotel-button" data-target="5">
+                                    North Star Hotel
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hotel-card">
+                        <div class="hotel-card__heading">
+                            <h4>Polo Floatel</h4>
+                            <a
+                                href="https://www.hotelpolotowers.com/polo-floatel-kolkata/"
+                                class="hotel-booking-btn"
+                                target="_blank"
+                                >Book Online</a
+                            >
+                        </div>
+                        <img
+                            src="assets/hotels/polofloatelkolkata.png"
+                            alt="image of Polo Floatel Kolkata"
+                        />
+                        <div class="hotel-card__contact">
+                            <p class="hotel-address">9/10, Kolkata Jetty, Strand Rd, Kol-700001</p>
+                            <p class="hotel-number">+91 99867 02889</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="area-row-wrapper">
+                <div class="area-card">
+                    <h3 class="area-card__heading">Central</h3>
+                    <div class="area-card__intro">
+                        <p></p>
+                        <ul></ul>
+                    </div>
+                </div>
+                <div class="hotel-card-wrapper">
+                    <div class="hotel-card-buttons-wrapper">
+                        <ul>
+                            <li>
+                                <button class="hotel-button active-button" data-target="6">
+                                    The Oberoi Grand
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hotel-button" data-target="7">
+                                    The Park Hotel
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hotel-button" data-target="8">
+                                    Peerless Hotel
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hotel-button" data-target="9">
+                                    Kenilworth Hotel
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hotel-button" data-target="10">
+                                    Barsana Hotel
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hotel-button" data-target="11">
+                                    LaLiT Great Eastern
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hotel-card">
+                        <div class="hotel-card__heading">
+                            <h4>The Oberoi Grand</h4>
+                            <a
+                                href="https://www.oberoihotels.com/hotels-in-kolkata/"
+                                class="hotel-booking-btn"
+                                target="_blank"
+                                >Book Online</a
+                            >
+                        </div>
+                        <img
+                            src="assets/hotels/theoberoigrand.png"
+                            alt="image of The Oberoi Grand"
+                        />
+                        <div class="hotel-card__contact">
+                            <p class="hotel-address">
+                                15, Jawaharlal Nehru Road, Kolkata-700013
+                            </p>
+                            <p class="hotel-number">+91 33 2249 2323</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="area-row-wrapper">
+                <div class="area-card">
+                    <h3 class="area-card__heading">South</h3>
+                    <div class="area-card__intro">
+                        <p></p>
+                        <ul></ul>
+                    </div>
+                </div>
+                <div class="hotel-card-wrapper">
+                    <div class="hotel-card-buttons-wrapper">
+                        <ul>
+                            <li>
+                                <button class="hotel-button active-button" data-target="12">
+                                    ITC Royal Bengal
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hotel-button" data-target="13">
+                                    JW Marriott
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hotel-button" data-target="14">
+                                    Taj Bengal
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hotel-button" data-target="15">
+                                    HHI
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hotel-button" data-target="16">
+                                    Hyatt Centric
+                                </button>
+                            </li>
+                            <li>
+                                <button class="hotel-button" data-target="17">
+                                    Roland Hotel
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hotel-card">
+                        <div class="hotel-card__heading">
+                            <h4>ITC Royal Bengal</h4>
+                            <a
+                                href="https://www.itchotels.com/in/en/itcroyalbengal-kolkata"
+                                class="hotel-booking-btn"
+                                target="_blank"
+                                >Book Online</a
+                            >
+                        </div>
+                        <img
+                            src="assets/hotels/itcroyalbengal.png"
+                            alt="image of ITC Royal Bengal"
+                        />
+                        <div class="hotel-card__contact">
+                            <p class="hotel-address">1, JBS Haldane Ave, Tangra, Kolkata-700046</p>
+                            <p class="hotel-number">1-800-419-6444</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="cta">
+            <div class="cta-text">
+                <h2>Ready to Visit?</h2>
+                <h3>Book with us.</h3>
+                <p>
+                    Experience the dynamic spirit of Kolkata in a whole new way. 
+                    Explore famous landmarks and uncover hidden treasures with 
+                    our thoughtfully designed tours, combining excitement and tranquility. 
+                    Reserve your journey now and delve into the essence of the City of Joy with us.
+                </p>
+            </div>
+            <div class="cta-form-wrapper">
+                <form class="cta-form">
+                    <div>
+                        <label for="cta-fromlocation">From</label>
+                        <input
+                            type="text"
+                            id="cta-fromlocation"
+                            maxlength="3"
+                            pattern="[A-Za-z]+"
+                            placeholder="CCU"
+                        />
+                    </div>
+                    <div>
+                        <label for="cta-tolocation">To</label>
+                        <input
+                            type="text"
+                            id="cta-tolocation"
+                            placeholder="BLR"
+                            disabled
+                        />
+                    </div>
+                    <div>
+                        <label for="cta-departure">Departure</label>
+                        <input type="date" id="cta-departure" min="2020-01-01" />
+                    </div>
+                    <div>
+                        <label for="cta-arrival">Arrival</label>
+                        <input type="date" id="cta-arrival" min="2020-01-01" />
+                    </div>
+                    <div>
+                        <label for="cta-travelers">Travelers</label>
+                        <input
+                            type="number"
+                            id="cta-travelers"
+                            min="1"
+                            max="10"
+                            placeholder="Adults"
+                        />
+                    </div>
+                    <button type="submit" id="cta-button">
+                        Complete Reservation <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content-wrapper">
+            <div>
+                <h5>About Kolkata</h5>
+                <ul class="footer__nyc-links">
+                    <li>
+                        <a
+                            href="https://www.nscbiairport.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >VistaNest Airport(CCU)</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.skyscanner.co.in/flights-to/ccu/cheap-flights-to-kolkata-airport.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Book Your Flights</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.makemytrip.com/hotels/kolkata-hotels.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Find A Hotel</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://en.wikipedia.org/wiki/Kolkata"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >Wikipedia</a
+                        >
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h5>About This Site</h5>
+                <p>
+                    The site was developed using a combination of HTML, CSS, and
+                    JavaScript, and it also integrates DistanceTo from RapidAPI for
+                    flight times and OpenWeatherAPI for current weather in the hero
+                    section.
+                </p>
+            </div>
+            <div>
+                <h5>About The Creator</h5>
+                <p>
+                    The creator is a frontend developer who built this webpage as a
+                    means of honing their skills in constructing responsive landing
+                    pages with intricate layouts.
+                </p>
+                <div>
+                    <ul class="footer__social-icons">
+                        <li>
+                            <a
+                                href="https://x.com/avishek_jha23"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Twitter profile"
+                                ><i class="fa-brands fa-square-x-twitter"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://github.com/avishekjha23"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Github profile"
+                                ><i class="fa-brands fa-square-github"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.linkedin.com/in/avishek-jha-459647216/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Linkedin profile"
+                                ><i class="fa-brands fa-linkedin"></i
+                            ></a>
+                        </li>
+                        <li>
+                            <a
+                                href="mailto:avishekjha23.aj@gmail.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Email me"
+                                ><i class="fa-solid fa-square-envelope"></i
+                            ></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

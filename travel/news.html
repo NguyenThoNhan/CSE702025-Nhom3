@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Tức - Evo Tour</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="news.css"> <!-- File CSS riêng cho trang tin tức -->
+</head>
+<body>
+
+    <!-- Header (Tái sử dụng) -->
+    <header class="header">
+        <!-- Dán code Header đầy đủ của bạn vào đây -->
+        <div class="header-main"> <a href="main.html" class="logo"> <img src="images/register.png" alt="Evo Tour Logo"> </a> <form action="" class="search-form"> <input type="search" name="search" id="search-box" placeholder="Nhập tên thành phố bạn muốn tới..."> <label for="search-box" class="fas fa-search"></label> </form> <div class="icons"> <a href="#"><i class="fas fa-user"></i> Tài khoản</a> <a href="favorites.html"><i class="fas fa-heart"></i> Yêu thích <span class="badge" id="fav-count">0</span></a> <a href="cart.html"><i class="fas fa-shopping-cart"></i> Giỏ hàng <span class="badge" id="cart-count">0</span></a> </div> <div id="menu-btn" class="fas fa-bars"></div> </div>
+        <nav class="navbar"> <ul> <li><a href="main.html">Trang chủ</a></li> <li><a href="#">Giới thiệu</a></li> <li class="dropdown"> <a href="#">Tour du lịch <i class="fas fa-angle-down"></i></a> <ul class="dropdown-menu"> <li><a href="tour-domestic.html">Tour trong nước</a></li> <li><a href="tour-international.html">Tour nước ngoài</a></li> <li><a href="#">Tour theo chủ đề</a></li> </ul> </li> <li><a href="promotions.html">Tour khuyến mãi</a></li> <li><a href="news.html">Tin tức</a></li> <li><a href="dichvu/dichvu.html">Dịch vụ</a></li> <li><a href="404_page/cow-401page.html">FAQ</a></li> <li><a href="404_page/cow-401page.html">Liên hệ</a></li> </ul> </nav>
+    </header>
+
+    <main class="static-page">
+        <!-- Breadcrumb -->
+        <section class="breadcrumb-section">
+            <div class="breadcrumb">
+                <a href="main.html">Trang chủ</a> / 
+                <span>Tất cả tin tức</span>
+            </div>
+        </section>
+
+        <div class="news-layout">
+            <!-- Cột chính - Danh sách bài viết -->
+            <div class="main-content">
+                <div class="news-grid-container" id="news-grid">
+                    <!-- Các bài viết sẽ được JS chèn vào đây -->
+                </div>
+                <div class="pagination" id="pagination">
+                    <!-- Phân trang sẽ được JS chèn vào đây -->
+                </div>
+            </div>
+
+            <!-- Cột phụ - Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">DANH MỤC</h3>
+                    <ul class="widget-list">
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li class="has-submenu">
+                            <a href="#">Tour du lịch</a>
+                            <button class="submenu-toggle"><i class="fas fa-plus"></i></button>
+                        </li>
+                        <li><a href="#">Tour khuyến mãi</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Kinh nghiệm du lịch</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                 <div class="sidebar-widget">
+                    <h3 class="widget-title">BÀI VIẾT ĐƯỢC YÊU THÍCH</h3>
+                    <div class="popular-posts" id="popular-posts">
+                        <!-- Bài viết yêu thích sẽ được JS chèn vào đây -->
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <a href="#">
+                        <img src="images/g-6.jpg" alt="Quảng cáo" class="sidebar-ad">
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer (Tái sử dụng) -->
+    <footer class="footer">
+        <!-- Dán code Footer đầy đủ của bạn vào đây -->
+        <div class="box-container" style="display:flex; justify-content:space-around; align-items:center; padding: 2rem 7%;"> <div> <h3 style="color:#fff; font-size: 1.8rem;">ĐĂNG KÝ NHẬN TIN</h3> <p style="color:#ccc; font-size: 1.4rem;">Các deal du lịch giảm giá đến 60% sẽ được gửi đến bạn</p> </div> <form action="" class="newsletter-form" style="display:flex;"> <input type="email" placeholder="Địa chỉ Email" style="padding:1.2rem; border-radius: .5rem 0 0 .5rem; width: 30rem; font-size: 1.5rem;"> <button type="submit" class="btn" style="border-radius: 0 .5rem .5rem 0;">Đăng ký</button> </form> <div class="social-icons" style="font-size: 2.5rem;"> <a href="#" style="color:#fff; margin: 0 1rem;"><i class="fab fa-facebook-f"></i></a> <a href="#" style="color:#fff; margin: 0 1rem;"><i class="fab fa-twitter"></i></a> <a href="#" style="color:#fff; margin: 0 1rem;"><i class="fab fa-instagram"></i></a> <a href="#" style="color:#fff; margin: 0 1rem;"><i class="fab fa-youtube"></i></a> </div> </div>
+    </footer>
+
+    <!-- Các file Script -->
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+    <script src="news.js"></script>
+</body>
+</html>
