@@ -160,25 +160,25 @@ Biểu đồ Lớp của hệ thống VistaNest:
 
 Mở terminal tại thư mục gốc của dự án. 
 
-Chạy lệnh npm install . 
+### Chạy lệnh npm install . 
 
 🗃️ Thiết lập Cơ sở dữ liệu: 
 
 Bước 2.1: Đảm bảo dịch vụ MySQL đang hoạt động. 
 
-Bước 2.2: node setupDatabase.js 
+### Bước 2.2: node setupDatabase.js 
 
 🚀 Khởi chạy các Dịch vụ Backend: 
 
 Bước 3.1: Khởi chạy Core Service (Node.js): Mở một terminal mới, di chuyển vào thư mục server và chạy lệnh: 
 
-node index.js 
+### node index.js 
 
 Kết quả mong đợi: Server chính lắng nghe trên cổng 3000 và kết nối thành công tới CSDL. 
 
 Bước 3.2: Khởi chạy AI Service (Python): Mở một terminal khác, di chuyển vào thư mục chat và chạy lệnh: 
 
-python chat.py 
+### python chat.py 
 
 Kết quả mong đợi: Service chatbot lắng nghe trên cổng 5000, sẵn sàng nhận yêu cầu từ Core Service. 
 
@@ -189,7 +189,7 @@ Mở một terminal cuối cùng, di chuyển vào thư mục client (hoặc tra
 live-server 
 
 ---
-🚀 Lưu ý khi truy cập: 
+### 🚀 Lưu ý khi truy cập: 
 
 🎤 Tài khoản Admin Demo: Để truy cập trang quản trị, vui lòng sử dụng thông tin đăng nhập sau: 
 
@@ -198,7 +198,7 @@ Username: admin
 Password: adminpassword 
 
 ---
-🖼 Giao diện tiêu biểu:
+### 🖼 Giao diện tiêu biểu:
 
 ![demo](images/giaodien.png).
 
