@@ -64,4 +64,44 @@ Hệ thống gồm hai tác nhân chính: **User** và **Admin**.
 
 Sử dụng **Activity Diagram** để mô tả luồng xử lý đặt tour:
 
+![Flow Activity Flow](images/tuần_tự.drawio.png).
+
+### c. 🧠 Class Diagram
+
+Biểu đồ Lớp của hệ thống VistaNest:
+
+![Class Diagram](images/Class.drawio.png).
+
 ## 🚀 Hướng Dẫn Chạy Chương Trình
+
+📦 Khởi tạo Dự án và Cài đặt Thư viện: 
+
+Mở terminal tại thư mục gốc của dự án. 
+
+Chạy lệnh npm install . 
+
+🗃️ Thiết lập Cơ sở dữ liệu: 
+
+Bước 2.1: Đảm bảo dịch vụ MySQL đang hoạt động. 
+
+Bước 2.2: node setupDatabase.js 
+
+🚀 Khởi chạy các Dịch vụ Backend: 
+
+Bước 3.1: Khởi chạy Core Service (Node.js): Mở một terminal mới, di chuyển vào thư mục server và chạy lệnh: 
+
+node index.js 
+
+Kết quả mong đợi: Server chính lắng nghe trên cổng 3000 và kết nối thành công tới CSDL. 
+
+Bước 3.2: Khởi chạy AI Service (Python): Mở một terminal khác, di chuyển vào thư mục chat và chạy lệnh: 
+
+python chat.py 
+
+Kết quả mong đợi: Service chatbot lắng nghe trên cổng 5000, sẵn sàng nhận yêu cầu từ Core Service. 
+
+🌐 Khởi chạy Giao diện Người dùng (Frontend): 
+
+Mở một terminal cuối cùng, di chuyển vào thư mục client (hoặc travel) và sử dụng live-server để phục vụ các file tĩnh. 
+
+live-server 
