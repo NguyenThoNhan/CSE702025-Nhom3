@@ -5,6 +5,79 @@
 🌐 **➡️ [Live Demo](https://nguyenthonhan.github.io/Service_Travel/client)
 
 ---
+<h2>👥 Bảng phân chia công việc chi tiết của các thành viên trong nhóm theo từng tuần</h2>
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <thead>
+    <tr>
+      <th>Tuần</th>
+      <th>Nguyễn Thọ Nhân<br>(23010786)</th>
+      <th>Phạm Anh Thái<br>(23010784)</th>
+      <th>Hoàng Duy Sáng</th>
+      <th>Nguyễn Xuân Chức</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>✅ Chủ trì và thống nhất ý tưởng, mục tiêu dự án.<br>🔄 Phân công nhiệm vụ, tạo kho chung GitHub.</td>
+      <td>🛠️ Thiết lập môi trường Git, cấu trúc thư mục dự án theo tài liệu đặc tả (SRS).</td>
+      <td>📋 Phân tích yêu cầu hệ thống.<br>✍️ Góp phần tài liệu đặc tả.</td>
+      <td>🧠 Thiết kế lược đồ CSDL.<br>🔧 Tạo dữ liệu ban đầu.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>🧩 Thiết kế và phê duyệt kiến trúc hệ thống tổng thể (Client, Server, AI).<br>🔍 Giám sát tiến độ nhóm.</td>
+      <td>🔐 Lập trình API Xác thực (auth.js) – Đăng ký, đăng nhập, xác thực token.</td>
+      <td>🎨 Góp giao diện trang chủ và chi tiết.<br>🛠️ Tối ưu code giao diện.</td>
+      <td>✅ Viết và hoàn thiện script tạo database.<br>📄 Viết script thêm dữ liệu mẫu.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>🔬 Nghiên cứu và tích hợp công nghệ.<br>📦 Thiết kế khung mô-đun (API – js).</td>
+      <td>🔄 Lập trình API CRUD cho Tour, làm việc với CSDL.</td>
+      <td>🧱 Code giao diện trang danh sách và trang chi tiết client.</td>
+      <td>🔄 Lập trình API CRUD cho Khách hàng và Thanh toán.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>🤖 Nghiên cứu và phát triển AI Chat Service (chat.js).<br>📡 Kết nối gợi ý từ OpenAI API.</td>
+      <td>📦 Lập trình API Đơn hàng (orders.js) với transaction phức tạp.</td>
+      <td>🧱 Code toàn bộ giao diện Trang Quản trị (Admin).</td>
+      <td>⚙️ Xây dựng Chatbot hỗ trợ Gợi ý từ AI (chat.js).</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>🔗 Tích hợp hệ thống: kết nối Frontend và Backend.<br>🔐 Triển khai xác thực JWT.</td>
+      <td>🏗️ Hỗ trợ Backend cho trang Quản lý Sản phẩm và Khách hàng.</td>
+      <td>🎛️ Thiết kế giao diện Admin Dashboard.<br>🛠️ Hỗ trợ tối ưu UX.</td>
+      <td>🏗️ Hỗ trợ kết nối các phần Quản lý & AI vào Admin.</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>🛡️ Tập trung bảo mật:<br>- Mã hóa dữ liệu<br>- Hạn chế quyền truy cập<br>- Kiểm tra token & đăng nhập sai<br>- JWT</td>
+      <td>🔎 Kiểm thử API Backend và hiệu năng CSDL.</td>
+      <td>🔍 Kiểm thử giao diện người dùng và hiệu năng phản hồi UI.</td>
+      <td>🌐 Hoàn thiện UI Admin + CSS + Responsive.</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>🧠 Tổng hợp báo cáo toàn dự án:<br>- Logic<br>- Học thuật<br>- Nhất quán</td>
+      <td>🎤 Thiết kế slide PowerPoint cho buổi báo cáo.</td>
+      <td>📝 Hỗ trợ viết chi tiết phần báo cáo.</td>
+      <td>📝 Hỗ trợ viết chi tiết phần báo cáo.</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>🎙️ Thuyết trình, đóng gói sản phẩm cuối cùng.</td>
+      <td>📄 Hoàn thiện README.md, hướng dẫn cài đặt.</td>
+      <td>✅ Rà soát chính tả, định dạng toàn bộ tài liệu và slide.</td>
+      <td>✅ Chuẩn bị câu hỏi Q&A có thể gặp khi bảo vệ.</td>
+    </tr>
+  </tbody>
+</table>
+
+---
 
 ## 📋 Phân tích Yêu cầu
 
