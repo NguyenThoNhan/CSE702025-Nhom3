@@ -189,6 +189,6 @@ Password: adminpassword
 ---
 🖼 Giao diện tiêu biểu:
 
-![demo](images/Class.drawio.png).
+![demo](images/giaodien.png).
 
-![demo](images/Class.drawio.png).
+![demo](images/admin.png).
