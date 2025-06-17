@@ -178,3 +178,17 @@ Kết quả mong đợi: Service chatbot lắng nghe trên cổng 5000, sẵn s�
 Mở một terminal cuối cùng, di chuyển vào thư mục client (hoặc travel) và sử dụng live-server để phục vụ các file tĩnh. 
 
 live-server 
+---
+🚀 Lưu ý khi truy cập: 
+
+🎤 Tài khoản Admin Demo: Để truy cập trang quản trị, vui lòng sử dụng thông tin đăng nhập sau: 
+
+Username: admin 
+
+Password: adminpassword 
+---
+🖼 Giao diện tiêu biểu:
+
+![demo](images/Class.drawio.png).
+
+![demo](images/Class.drawio.png).
