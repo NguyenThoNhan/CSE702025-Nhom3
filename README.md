@@ -79,6 +79,15 @@
 
 ---
 
+## 📜 Tuyên bố Tầm nhìn và Sứ mệnh 
+
+Tên dự án: VistaNest 
+
+Tầm nhìn (Vision): Trở thành nền tảng du lịch thông minh, đáng tin cậy hàng đầu, nơi mỗi hành trình của khách hàng đều được cá nhân hóa và hỗ trợ bởi công nghệ tiên tiến. 
+
+Sứ mệnh (Mission): Đơn giản hóa quá trình tìm kiếm và đặt tour du lịch thông qua một giao diện trực quan, đồng thời cung cấp các công cụ quản trị mạnh mẽ để tối ưu hóa hoạt động kinh doanh cho doanh nghiệp. 
+
+---
 ## 📋 Phân tích Yêu cầu
 
 ### a. 🎯 Đặt vấn đề bài toán
