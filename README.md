@@ -13,21 +13,21 @@
       <th>Tuần</th>
       <th>Nguyễn Thọ Nhân<br>(23010786)</th>
       <th>Phạm Anh Thái<br>(23010784)</th>
-      <th>Hoàng Duy Sáng</th>
-      <th>Nguyễn Xuân Chức</th>
+      <th>Hoàng Duy Sáng(23010481)</th>
+      <th>Nguyễn Xuân Chức(23010452)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>1</td>
-      <td>✅ Chủ trì và thống nhất ý tưởng, mục tiêu dự án.<br>🔄 Phân công nhiệm vụ, tạo kho chung GitHub.</td>
+      <td>💡 Chủ trì và thống nhất ý tưởng, mục tiêu, phạm vi dự án.<br>🔄 Phân công nhiệm vụ, tạo kho chung GitHub.</td>
       <td>🛠️ Thiết lập môi trường Git, cấu trúc thư mục dự án theo tài liệu đặc tả (SRS).</td>
       <td>📋 Phân tích yêu cầu hệ thống.<br>✍️ Góp phần tài liệu đặc tả.</td>
-      <td>🧠 Thiết kế lược đồ CSDL.<br>🔧 Tạo dữ liệu ban đầu.</td>
+      <td>🗃️ Thiết kế lược đồ CSDL tourdb và các mối quan hệ.</td>
     </tr>
     <tr>
       <td>2</td>
-      <td>🧩 Thiết kế và phê duyệt kiến trúc hệ thống tổng thể (Client, Server, AI).<br>🔍 Giám sát tiến độ nhóm.</td>
+      <td>🏛️ Thiết kế và phê duyệt kiến trúc hệ thống tổng tổng thể (Client, Server, AI).<br>🔍 Giám sát tiến độ nhóm.</td>
       <td>🔐 Lập trình API Xác thực (auth.js) – Đăng ký, đăng nhập, xác thực token.</td>
       <td>🎨 Góp giao diện trang chủ và chi tiết.<br>🛠️ Tối ưu code giao diện.</td>
       <td>✅ Viết và hoàn thiện script tạo database.<br>📄 Viết script thêm dữ liệu mẫu.</td>
